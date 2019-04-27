@@ -22,4 +22,4 @@ This project is not under any license
 
 ## Acknowledgments
 
-* Professor Rosaldo Rossetti
+* Teacher Rosaldo Rossetti

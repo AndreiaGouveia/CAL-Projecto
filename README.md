@@ -13,7 +13,6 @@ You can view this course informartion [here](https://sigarra.up.pt/feup/pt/ucurr
 ## Authors
 
 * **Andreia Gouveia** [AndreiaGouveia](https://github.com/AndreiaGouveia)
-* **Helena Ferreira** [MHelena45](https://github.com/MHelena45)
 * **Miguel Simões** [MiguelSimoes35](https://github.com/MiguelSimoes35)
 
 ## License

@@ -2,14 +2,16 @@
 
 using namespace std;
 
-Truck::Truck() {
+int Truck::idg = 1;
+
+Truck::Truck() : id(idg++) {
     volume = INF;
     waste = domestic;
     capacity = 0;
     capacity_rate = 0.0;
-};
+}
 
-Truck::Truck(int volume, enum types_of_waste waste) {
+Truck::Truck(int volume, enum types_of_waste waste) : id(idg++) {
     this->volume = volume;
     this->waste = waste;
     capacity = 0;
@@ -30,6 +32,10 @@ enum types_of_waste Truck::getWaste() {
 
 void Truck::setWaste(enum types_of_waste waste) {
     this->waste = waste;
+}
+
+int Truck::getID() {
+    return id;
 }
 
 float Truck::getCapacity() {

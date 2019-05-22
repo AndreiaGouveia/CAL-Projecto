@@ -16,6 +16,8 @@ enum types_of_waste {
 };
 
 class Truck {
+    static int idg;
+    const int id;
     int volume;
     enum types_of_waste waste;
     float capacity;                 //capacity of the truck occupied with garbage
@@ -30,6 +32,7 @@ public:
     float getCapacity();
     float getCapacityRate();
     void updateCapacity(float waste_volume);
+    int getID();
 };
 
 

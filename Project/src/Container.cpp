@@ -44,6 +44,6 @@ float Container::getCapacityRate() {
 void Container::updateCapacity(float waste_volume) {
     if ((capacity + waste_volume) <= max_capacity && capacity_rate <= 100.0) {
         capacity += waste_volume;
-        capacity_rate = (capacity / volume) * 100;
+        capacity_rate = (capacity / max_capacity) * 100;
     }
 }

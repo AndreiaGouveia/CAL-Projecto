@@ -7,4 +7,4 @@ include_directories(.)
 include_directories(src)
 
 add_executable(Project
-        src/main.cpp)
+        src/main.cpp src/Graph.h src/Truck.cpp src/Truck.h)

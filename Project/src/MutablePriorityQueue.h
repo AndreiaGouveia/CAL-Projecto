@@ -39,7 +39,7 @@ public:
 
 template <class T>
 MutablePriorityQueue<T>::MutablePriorityQueue() {
-    H.push_back(NULL);
+    H.push_back(nullptr);
     // indices will be used starting in 1
     // to facilitate parent/child calculations
 }
@@ -106,7 +106,7 @@ void MutablePriorityQueue<T>::set(unsigned i, T * x) {
 
 template <class T>
 bool MutablePriorityQueue<T>::find(T* toFind) {
-    return (std::find(H.begin(), H.end(), toFind) != H.end());
+    return (find(H.begin(), H.end(), toFind) != H.end());
 }
 
 #endif /* SRC_MUTABLEPRIORITYQUEUE_H_ */

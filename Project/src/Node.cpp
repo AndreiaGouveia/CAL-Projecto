@@ -2,14 +2,14 @@
 
 using namespace std;
 
-int Node::idg = 1;
-
-Node::Node() : id(idg++) {
+Node::Node() {
+    id = 0;
     x_coord = 0;
     y_coord = 0;
 }
 
-Node::Node(float x_coord, float y_coord) : id(idg++) {
+Node::Node(int id, float x_coord, float y_coord) {
+    this->id = id;
     this->x_coord = x_coord;
     this->y_coord = y_coord;
 }

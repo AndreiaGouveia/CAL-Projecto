@@ -8,13 +8,12 @@
 
 class Node {
 protected:
-    static int idg;
-    const int id;
+    int id;
     float x_coord;
     float y_coord;
 public:
     Node();
-    Node(float x_coord, float y_coord);
+    Node(int id, float x_coord, float y_coord);
     int getID();
     float getX_Coord();
     float getY_Coord();

@@ -26,6 +26,7 @@ template <class T> class Vertex;
 
 template <class T>
 class Vertex {
+    int id;
     T info;                // contents
     vector<Edge<T> > adj;  // list of outgoing edges
     bool visited;          // auxiliary field used by dfs and bfs
@@ -44,6 +45,8 @@ public:
     T getInfo() const;
     double getDist() const;
     Vertex *getPath() const;
+    int getID() const;
+    void setID(int new_id);
 };
 
 template <class T>
@@ -93,6 +96,16 @@ Vertex<T> *Vertex<T>::getPath() const {
     return this->path;
 }
 
+template <class T>
+int Vertex<T>::getID() const {
+    return this->id;
+}
+
+template <class T>
+void Vertex<T>::setID(int new_id) {
+    this->id = new_id;
+}
+
 /////////////////////////////////////////////////////////
 /////           EDGES                               /////
 /////////////////////////////////////////////////////////
@@ -123,6 +136,7 @@ class Graph {
     bool dfsIsDAG(Vertex<T> *v) const;
 public:
     int getNumVertex() const;
+    vector<Vertex<T>*> getVertexSet() const;
     bool addVertex(const T &in);
     bool removeVertex(const T &in);
     bool addEdge(const T &sourc, const T &dest, double w);
@@ -141,6 +155,11 @@ public:
 template <class T>
 int Graph<T>::getNumVertex() const {
     return vertexSet.size();
+}
+
+template <class T>
+vector<Vertex<T>*> Graph<T>::getVertexSet() const {
+    return vertexSet;
 }
 
 /*

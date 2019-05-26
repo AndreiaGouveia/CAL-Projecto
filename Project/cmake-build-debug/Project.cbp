@@ -8,86 +8,128 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/ASUS/Desktop/FEUP/2Ano/2Semestre/CAL/Project/CAL-Projecto/Project/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/ASUS/Desktop/FEUP/2Ano/2Semestre/CAL/Project/CAL-Projecto/Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/ASUS/Desktop/FEUP/2Ano/2Semestre/CAL/Project/CAL-Projecto/Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/ASUS/Desktop/FEUP/2Ano/2Semestre/CAL/Project/CAL-Projecto/Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/ASUS/Desktop/FEUP/2Ano/2Semestre/CAL/Project/CAL-Projecto/Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Project">
-				<Option output="C:/Users/ASUS/Desktop/FEUP/2Ano/2Semestre/CAL/Project/CAL-Projecto/Project/cmake-build-debug/Project.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/ASUS/Desktop/FEUP/2Ano/2Semestre/CAL/Project/CAL-Projecto/Project/cmake-build-debug"/>
+				<Option output="C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/cmake-build-debug/Project.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Users/ASUS/Desktop/FEUP/2Ano/2Semestre/CAL/Project/CAL-Projecto/Project/."/>
-					<Add directory="C:/Users/ASUS/Desktop/FEUP/2Ano/2Semestre/CAL/Project/CAL-Projecto/Project/src"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/."/>
+					<Add directory="C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/src"/>
+					<Add directory="C:/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32"/>
+					<Add directory="C:/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/ASUS/Desktop/FEUP/2Ano/2Semestre/CAL/Project/CAL-Projecto/Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 Project"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/ASUS/Desktop/FEUP/2Ano/2Semestre/CAL/Project/CAL-Projecto/Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/ASUS/Desktop/FEUP/2Ano/2Semestre/CAL/Project/CAL-Projecto/Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/ASUS/Desktop/FEUP/2Ano/2Semestre/CAL/Project/CAL-Projecto/Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 Project"/>
+					<CompileFile command="C:/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Project/fast">
-				<Option output="C:/Users/ASUS/Desktop/FEUP/2Ano/2Semestre/CAL/Project/CAL-Projecto/Project/cmake-build-debug/Project.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/ASUS/Desktop/FEUP/2Ano/2Semestre/CAL/Project/CAL-Projecto/Project/cmake-build-debug"/>
+				<Option output="C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/cmake-build-debug/Project.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="C:/Users/ASUS/Desktop/FEUP/2Ano/2Semestre/CAL/Project/CAL-Projecto/Project/."/>
-					<Add directory="C:/Users/ASUS/Desktop/FEUP/2Ano/2Semestre/CAL/Project/CAL-Projecto/Project/src"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+					<Add directory="C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/."/>
+					<Add directory="C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/src"/>
+					<Add directory="C:/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++"/>
+					<Add directory="C:/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/i686-w64-mingw32"/>
+					<Add directory="C:/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include/c++/backward"/>
+					<Add directory="C:/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include"/>
+					<Add directory="C:/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/include-fixed"/>
+					<Add directory="C:/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/../lib/gcc/i686-w64-mingw32/8.1.0/../../../../i686-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/ASUS/Desktop/FEUP/2Ano/2Semestre/CAL/Project/CAL-Projecto/Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 Project/fast"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/ASUS/Desktop/FEUP/2Ano/2Semestre/CAL/Project/CAL-Projecto/Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/ASUS/Desktop/FEUP/2Ano/2Semestre/CAL/Project/CAL-Projecto/Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/ASUS/Desktop/FEUP/2Ano/2Semestre/CAL/Project/CAL-Projecto/Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 Project/fast"/>
+					<CompileFile command="C:/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/ASUS/Desktop/FEUP/2Ano/2Semestre/CAL/Project/CAL-Projecto/Project/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/ASUS/Desktop/FEUP/2Ano/2Semestre/CAL/Project/CAL-Projecto/Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/ASUS/Desktop/FEUP/2Ano/2Semestre/CAL/Project/CAL-Projecto/Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/ASUS/Desktop/FEUP/2Ano/2Semestre/CAL/Project/CAL-Projecto/Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/ASUS/Desktop/FEUP/2Ano/2Semestre/CAL/Project/CAL-Projecto/Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/ASUS/Desktop/FEUP/2Ano/2Semestre/CAL/Project/CAL-Projecto/Project/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/ASUS/Desktop/FEUP/2Ano/2Semestre/CAL/Project/CAL-Projecto/Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/ASUS/Desktop/FEUP/2Ano/2Semestre/CAL/Project/CAL-Projecto/Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/ASUS/Desktop/FEUP/2Ano/2Semestre/CAL/Project/CAL-Projecto/Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/ASUS/Desktop/FEUP/2Ano/2Semestre/CAL/Project/CAL-Projecto/Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/ASUS/Desktop/FEUP/2Ano/2Semestre/CAL/Project/CAL-Projecto/Project/src/main.cpp">
+		<Unit filename="C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/src/Container.cpp">
 			<Option target="Project"/>
 		</Unit>
-		<Unit filename="C:/Users/ASUS/Desktop/FEUP/2Ano/2Semestre/CAL/Project/CAL-Projecto/Project/CMakeLists.txt">
+		<Unit filename="C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/src/Container.h">
+			<Option target="Project"/>
+		</Unit>
+		<Unit filename="C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/src/Graph.h">
+			<Option target="Project"/>
+		</Unit>
+		<Unit filename="C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/src/Load.cpp">
+			<Option target="Project"/>
+		</Unit>
+		<Unit filename="C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/src/Load.h">
+			<Option target="Project"/>
+		</Unit>
+		<Unit filename="C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/src/Loader.cpp">
+			<Option target="Project"/>
+		</Unit>
+		<Unit filename="C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/src/Loader.h">
+			<Option target="Project"/>
+		</Unit>
+		<Unit filename="C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/src/MutablePriorityQueue.h">
+			<Option target="Project"/>
+		</Unit>
+		<Unit filename="C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/src/Node.cpp">
+			<Option target="Project"/>
+		</Unit>
+		<Unit filename="C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/src/Node.h">
+			<Option target="Project"/>
+		</Unit>
+		<Unit filename="C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/src/Station.cpp">
+			<Option target="Project"/>
+		</Unit>
+		<Unit filename="C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/src/Station.h">
+			<Option target="Project"/>
+		</Unit>
+		<Unit filename="C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/src/Truck.cpp">
+			<Option target="Project"/>
+		</Unit>
+		<Unit filename="C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/src/Truck.h">
+			<Option target="Project"/>
+		</Unit>
+		<Unit filename="C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/src/main.cpp">
+			<Option target="Project"/>
+		</Unit>
+		<Unit filename="C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

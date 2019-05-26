@@ -5,6 +5,7 @@
 #include <vector>
 #include <string>
 #include <limits>
+#include "Node.h"
 
 #define INF numeric_limits<int>::max()
 
@@ -15,7 +16,7 @@ enum types_of_waste {
     domestic
 };
 
-class Container {
+class Container : public Node {
     enum types_of_waste waste;
     float max_capacity_rate;        //max that is interesting for a truck to pick up
     float max_capacity;             //max capacity that a container can have

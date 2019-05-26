@@ -57,6 +57,7 @@ Vertex<T>::Vertex(T in): info(in) {}
  * with a given destination vertex (d) and edge weight (w).
  */
 template <class T>
+
 void Vertex<T>::addEdge(Vertex<T> *d, double w) {
     adj.push_back(Edge<T>(d, w));
 }
@@ -168,7 +169,7 @@ vector<Vertex<T>*> Graph<T>::getVertexSet() const {
 template <class T>
 Vertex<T> * Graph<T>::findVertex(const T &in) const {
     for (auto v : vertexSet)
-        if (v->info == in)
+        if ((*v).getInfo() == in)
             return v;
     return nullptr;
 }

@@ -1,5 +1,11 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Project.dir/src/main.cpp.obj"
+  "CMakeFiles/Project.dir/src/Truck.cpp.obj"
+  "CMakeFiles/Project.dir/src/Node.cpp.obj"
+  "CMakeFiles/Project.dir/src/Loader.cpp.obj"
+  "CMakeFiles/Project.dir/src/Load.cpp.obj"
+  "CMakeFiles/Project.dir/src/Container.cpp.obj"
+  "CMakeFiles/Project.dir/src/Station.cpp.obj"
   "Project.pdb"
   "Project.exe"
   "Project.exe.manifest"

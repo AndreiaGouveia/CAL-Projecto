@@ -1,9 +1,10 @@
-#include "Loader.h"
+
+  #include "Loader.h"
 
 void LoadNodes(Graph<Node> &graph) {
     string line;
     int numNodes;
-    ifstream file("T02_nodes_X_Y_Porto.txt");
+    ifstream file("C:\\Users\\Andreia Gouveia\\Documents\\Aulas\\CAL\\CAL-Projecto\\T02\\Porto\\T02_nodes_X_Y_Porto.txt");
 
     if(!file.is_open()) {
         cout << "Error opening file" << endl;

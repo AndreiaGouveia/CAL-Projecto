@@ -10,7 +10,7 @@ Container::Container() {
 };
 
 Container::Container(float max, enum types_of_waste waste) {
-    max_capacity = maz;
+    max_capacity = max;
     max_capacity_rate =0.75;
     this->waste = waste;
     capacity = 0;
@@ -21,7 +21,7 @@ int Container::getMax_capacity_rate() {
     return max_capacity_rate;
 }
 
-void setMax_capacity_rate(float rate)) {
+void Container::setMax_capacity_rate(float rate) {
     max_capacity_rate = rate;
 }
 
@@ -47,3 +47,4 @@ void Container::updateCapacity(float waste_volume) {
         capacity_rate = (capacity / max_capacity) * 100;
     }
 }
+

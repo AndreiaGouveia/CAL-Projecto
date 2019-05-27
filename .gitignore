@@ -31,3 +31,7 @@
 *.out
 *.app
 /.metadata/
+
+Project/cmake-build-debug/
+
+Project/\.idea/

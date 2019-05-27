@@ -21,7 +21,7 @@ void LoadNodes(Graph<Node> &graph) {
 
     string line;
     int numNodes;
-    ifstream file("C:\\Users\\Andreia Gouveia\\Documents\\Aulas\\CAL\\CAL-Projecto\\T02\\Porto\\T02_nodes_X_Y_Porto.txt");
+    ifstream file("..\\Nodes_Porto\\T02_nodes_X_Y_Porto.txt");
 
     if(!file.is_open()) {
         cout << "Error opening file" << endl;
@@ -62,7 +62,7 @@ void LoadNodes(Graph<Node> &graph) {
         cout << "Nodes successfully loaded!" << endl;
     }
     else {
-        cout<<"nodes : "<<graph.getNumVertex()<<"     expected: "<<numNodes<<endl;
+        cout << "nodes : " << graph.getNumVertex() << "     expected: " << numNodes << endl;
         cout << "An unexpected error happened, please reinitialize the program." << endl;
         file.close();
         exit(1);
@@ -74,7 +74,7 @@ void LoadNodes(Graph<Node> &graph) {
 void LoadEdges(Graph<Node> &graph) {
     string line;
     int numEdges;
-    ifstream file("C:\\Users\\Andreia Gouveia\\Documents\\Aulas\\CAL\\CAL-Projecto\\T02\\Porto\\T02_edges_Porto.txt");
+    ifstream file("..\\Nodes_Porto\\T02_edges_Porto.txt");
 
     if(!file.is_open()) {
         cout << "Error opening file" << endl;
@@ -118,7 +118,7 @@ void LoadEdges(Graph<Node> &graph) {
     int counter=0;
     for(auto a : graph.getVertexSet())
     {
-        counter+=a->getEdges().size();
+        counter += a->getEdges().size();
     }
 
 
@@ -141,7 +141,7 @@ vector<vector<int>> LoadTags() {
     int id;
     int counter = 0;
     int numberOfObjects;
-          ifstream file("C:\\Users\\Andreia Gouveia\\Documents\\Aulas\\CAL\\CAL-Projecto\\T02\\Porto\\T02_tags_Porto.txt");//COLOCAR O PROPIO PATH, SENAO NAO FUNCIONA
+    ifstream file("..\\Nodes_Porto\\T02_tags_Porto.txt");//COLOCAR O PROPIO PATH, SENAO NAO FUNCIONA
 
     if(!file.is_open()) {
         cout << "Error opening file" << endl;

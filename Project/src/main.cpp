@@ -1,14 +1,10 @@
 #include <iostream>
-
-#include "Loader.h"
-#include "Graph.h"
+#include "FullGraph.h"
 
 using namespace std;
 
 int main() {
-    Graph<Node> a;
-    LoadNodes(a);
-    LoadEdges(a);
+    FullGraph graph;
     system("pause");
     return 0;
 }

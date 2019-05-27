@@ -10,6 +10,7 @@
 #include "Container.h"
 #include "Station.h"
 #include "Truck.h"
+#include "Loader.h"
 
 class FullGraph {
 

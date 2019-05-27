@@ -10,9 +10,6 @@
  */
 void addTags(vector<Container* > & containers, vector<Station* > & stations,vector<vector<int>> &tags,vector<Vertex<Node>*> &nodes)
 {
-    LoadNodes(*mapGraph);
-    LoadEdges(*mapGraph);
-    vector<vector<int>> tags = LoadTags();
 
     /*
      * GET NORMAL CONTAINERS

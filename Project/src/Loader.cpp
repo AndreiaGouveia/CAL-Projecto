@@ -1,27 +1,14 @@
 #include "Loader.h"
+
 /**
- * Aux function for node loader
- */
-int tagExists(int id , vector<vector<int>> tags) {
-    int counter = 0;
+* Loader functions
+*/
 
-    for (; counter<tags.size(); counter++) {
-        if(find(tags[counter].begin(), tags[counter].end(), id) != tags[counter].end()) {
-            return counter;
-        }
-        counter++;
-    }
-    return 3;
-}
-
-  /**
-  * Loader functions
-  */
 void LoadNodes(Graph<Node> &graph) {
 
     string line;
     int numNodes;
-    ifstream file("..\\Nodes_Porto\\T02_nodes_X_Y_Porto.txt");
+    ifstream file("C:\\Users\\Andreia Gouveia\\Documents\\Aulas\\CAL-Projecto\\Project\\Nodes_Porto\\T02_nodes_X_Y_Porto.txt");
 
     if(!file.is_open()) {
         cout << "Error opening file" << endl;
@@ -74,7 +61,7 @@ void LoadNodes(Graph<Node> &graph) {
 void LoadEdges(Graph<Node> &graph) {
     string line;
     int numEdges;
-    ifstream file("..\\Nodes_Porto\\T02_edges_Porto.txt");
+    ifstream file("C:\\Users\\Andreia Gouveia\\Documents\\Aulas\\CAL-Projecto\\Project\\Nodes_Porto\\T02_edges_Porto.txt");
 
     if(!file.is_open()) {
         cout << "Error opening file" << endl;
@@ -90,7 +77,6 @@ void LoadEdges(Graph<Node> &graph) {
         string aux;
         int id_start;
         int id_end;
-        char space;
         Node start, end;
         double weight;
 
@@ -126,7 +112,7 @@ void LoadEdges(Graph<Node> &graph) {
         cout << "Edges successfully loaded!" << endl;
     }
     else {
-        cout << "An unexpected error happened, please reinitialize the program."  <<endl;
+        cout << "An unexpected error happened, please reinitialize the program.COUNTER "  <<counter<<" numedges: " <<numEdges<<endl;
         file.close();
         exit(1);
     }
@@ -141,7 +127,7 @@ vector<vector<int>> LoadTags() {
     int id;
     int counter = 0;
     int numberOfObjects;
-    ifstream file("..\\Nodes_Porto\\T02_tags_Porto.txt");//COLOCAR O PROPIO PATH, SENAO NAO FUNCIONA
+    ifstream file("C:\\Users\\Andreia Gouveia\\Documents\\Aulas\\CAL-Projecto\\Project\\Nodes_Porto\\T02_tags_Porto.txt");//COLOCAR O PROPIO PATH, SENAO NAO FUNCIONA
 
     if(!file.is_open()) {
         cout << "Error opening file" << endl;
@@ -172,6 +158,7 @@ vector<vector<int>> LoadTags() {
             counter++;
             line.clear();
         }
+
         idAndAttributes.push_back(ids);
         ids.clear();
         counter = 0;

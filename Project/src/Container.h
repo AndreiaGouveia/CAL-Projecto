@@ -18,8 +18,8 @@ class Container : public Node {
     bool toRecover;
     int a = 101, b = 0;
 public:
-    Container();
-    Container(float max, enum types_of_waste waste);   //limited capacity truck
+    Container(int id, float x, float y);
+    Container(int id, float x, float y,float max, enum types_of_waste waste);   //limited capacity truck
     enum types_of_waste getWaste();
     void setWaste(enum types_of_waste waste);
     float getCapacity();

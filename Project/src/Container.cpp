@@ -2,7 +2,7 @@
 
 using namespace std;
 
-Container::Container() {
+Container::Container(int id, float x, float y):Node(id,x,y){
     max_capacity = NoLimit;
     waste = domestic;
     capacity = 0;
@@ -10,7 +10,7 @@ Container::Container() {
     toRecover = false;
 };
 
-Container::Container(float max, enum types_of_waste waste) {
+Container::Container(int id, float x, float y,float max, enum types_of_waste waste):Node(id,x,y) {
     max_capacity = max;
     this->waste = waste;
     capacity = 0;

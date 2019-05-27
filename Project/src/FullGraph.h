@@ -8,6 +8,7 @@
 #include "Truck.h"
 #include "Loader.h"
 #include "Utils.h"
+#include "Loader.h"
 
 class FullGraph {
 
@@ -16,8 +17,8 @@ public:
     /*
      * Vectors and Matrix
      */
-    Graph<Node> * mapGraph; //graph originated from the maps
-    Graph<Node> * graph; //graph after preprocess
+    Graph<Node>  mapGraph; //graph originated from the maps
+    Graph<Node>  graph; //graph after preprocess
     vector<vector< Node >> edgesMatrix; //matrix of edges
     vector<Truck *> trucks;
     vector<Container*> containers;

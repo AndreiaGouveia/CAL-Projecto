@@ -93,18 +93,6 @@
 		<Unit filename="C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/src/Graph.h">
 			<Option target="Project"/>
 		</Unit>
-		<Unit filename="C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/src/Load.cpp">
-			<Option target="Project"/>
-		</Unit>
-		<Unit filename="C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/src/Load.h">
-			<Option target="Project"/>
-		</Unit>
-		<Unit filename="C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/src/Loader.cpp">
-			<Option target="Project"/>
-		</Unit>
-		<Unit filename="C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/src/Loader.h">
-			<Option target="Project"/>
-		</Unit>
 		<Unit filename="C:/Users/Andreia Gouveia/Documents/Aulas/CAL/CAL-Projecto/Project/src/MutablePriorityQueue.h">
 			<Option target="Project"/>
 		</Unit>

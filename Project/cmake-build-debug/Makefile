@@ -149,60 +149,6 @@ src/Container.cpp.s:
 	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/src/Container.cpp.s
 .PHONY : src/Container.cpp.s
 
-src/Load.obj: src/Load.cpp.obj
-
-.PHONY : src/Load.obj
-
-# target to build an object file
-src/Load.cpp.obj:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/src/Load.cpp.obj
-.PHONY : src/Load.cpp.obj
-
-src/Load.i: src/Load.cpp.i
-
-.PHONY : src/Load.i
-
-# target to preprocess a source file
-src/Load.cpp.i:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/src/Load.cpp.i
-.PHONY : src/Load.cpp.i
-
-src/Load.s: src/Load.cpp.s
-
-.PHONY : src/Load.s
-
-# target to generate assembly for a file
-src/Load.cpp.s:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/src/Load.cpp.s
-.PHONY : src/Load.cpp.s
-
-src/Loader.obj: src/Loader.cpp.obj
-
-.PHONY : src/Loader.obj
-
-# target to build an object file
-src/Loader.cpp.obj:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/src/Loader.cpp.obj
-.PHONY : src/Loader.cpp.obj
-
-src/Loader.i: src/Loader.cpp.i
-
-.PHONY : src/Loader.i
-
-# target to preprocess a source file
-src/Loader.cpp.i:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/src/Loader.cpp.i
-.PHONY : src/Loader.cpp.i
-
-src/Loader.s: src/Loader.cpp.s
-
-.PHONY : src/Loader.s
-
-# target to generate assembly for a file
-src/Loader.cpp.s:
-	$(MAKE) -f CMakeFiles\Project.dir\build.make CMakeFiles/Project.dir/src/Loader.cpp.s
-.PHONY : src/Loader.cpp.s
-
 src/Node.obj: src/Node.cpp.obj
 
 .PHONY : src/Node.obj
@@ -323,12 +269,6 @@ help:
 	@echo ... src/Container.obj
 	@echo ... src/Container.i
 	@echo ... src/Container.s
-	@echo ... src/Load.obj
-	@echo ... src/Load.i
-	@echo ... src/Load.s
-	@echo ... src/Loader.obj
-	@echo ... src/Loader.i
-	@echo ... src/Loader.s
 	@echo ... src/Node.obj
 	@echo ... src/Node.i
 	@echo ... src/Node.s

@@ -44,10 +44,18 @@ public:
     bool operator<(Vertex<T> & vertex) const; // // required by MutablePriorityQueue
     T getInfo() const;
     double getDist() const;
+    vector <Edge<T>> getEdges();
     Vertex *getPath() const;
     int getID() const;
     void setID(int new_id);
 };
+
+template <class T>
+vector <Edge<T>> Vertex<T>::getEdges()
+{
+    return adj;
+}
+
 
 template <class T>
 Vertex<T>::Vertex(T in): info(in) {}
@@ -105,6 +113,12 @@ int Vertex<T>::getID() const {
 template <class T>
 void Vertex<T>::setID(int new_id) {
     this->id = new_id;
+}
+
+template <class T>
+bool operator==(Vertex<T> a, Vertex<T> b)
+{
+    return a.getID()==b.getID();
 }
 
 /////////////////////////////////////////////////////////

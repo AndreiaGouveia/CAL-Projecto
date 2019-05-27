@@ -20,6 +20,7 @@ public:
     void setX_Coord(float x_coord);
     void setY_Coord(float y_coord);
     float distance (Node &n);
+    bool operator ==(Node n);
 };
 
 

@@ -9,6 +9,7 @@
 
 void LoadNodes(Graph<Node> & graph);
 void LoadEdges(Graph<Node> & graph);
+vector<vector<int>> LoadTags();
 
 
 #endif //PROJECT_LOADER_H*/

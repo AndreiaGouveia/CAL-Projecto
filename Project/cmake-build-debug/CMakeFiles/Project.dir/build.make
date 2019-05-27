@@ -98,38 +98,10 @@ CMakeFiles/Project.dir/src/Node.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/src/Node.cpp.s"
 	C:\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Andreia Gouveia\Documents\Aulas\CAL\CAL-Projecto\Project\src\Node.cpp" -o CMakeFiles\Project.dir\src\Node.cpp.s
 
-CMakeFiles/Project.dir/src/Loader.cpp.obj: CMakeFiles/Project.dir/flags.make
-CMakeFiles/Project.dir/src/Loader.cpp.obj: CMakeFiles/Project.dir/includes_CXX.rsp
-CMakeFiles/Project.dir/src/Loader.cpp.obj: ../src/Loader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Andreia Gouveia\Documents\Aulas\CAL\CAL-Projecto\Project\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Project.dir/src/Loader.cpp.obj"
-	C:\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project.dir\src\Loader.cpp.obj -c "C:\Users\Andreia Gouveia\Documents\Aulas\CAL\CAL-Projecto\Project\src\Loader.cpp"
-
-CMakeFiles/Project.dir/src/Loader.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project.dir/src/Loader.cpp.i"
-	C:\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Andreia Gouveia\Documents\Aulas\CAL\CAL-Projecto\Project\src\Loader.cpp" > CMakeFiles\Project.dir\src\Loader.cpp.i
-
-CMakeFiles/Project.dir/src/Loader.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/src/Loader.cpp.s"
-	C:\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Andreia Gouveia\Documents\Aulas\CAL\CAL-Projecto\Project\src\Loader.cpp" -o CMakeFiles\Project.dir\src\Loader.cpp.s
-
-CMakeFiles/Project.dir/src/Load.cpp.obj: CMakeFiles/Project.dir/flags.make
-CMakeFiles/Project.dir/src/Load.cpp.obj: CMakeFiles/Project.dir/includes_CXX.rsp
-CMakeFiles/Project.dir/src/Load.cpp.obj: ../src/Load.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Andreia Gouveia\Documents\Aulas\CAL\CAL-Projecto\Project\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Project.dir/src/Load.cpp.obj"
-	C:\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project.dir\src\Load.cpp.obj -c "C:\Users\Andreia Gouveia\Documents\Aulas\CAL\CAL-Projecto\Project\src\Load.cpp"
-
-CMakeFiles/Project.dir/src/Load.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Project.dir/src/Load.cpp.i"
-	C:\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Andreia Gouveia\Documents\Aulas\CAL\CAL-Projecto\Project\src\Load.cpp" > CMakeFiles\Project.dir\src\Load.cpp.i
-
-CMakeFiles/Project.dir/src/Load.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Project.dir/src/Load.cpp.s"
-	C:\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Andreia Gouveia\Documents\Aulas\CAL\CAL-Projecto\Project\src\Load.cpp" -o CMakeFiles\Project.dir\src\Load.cpp.s
-
 CMakeFiles/Project.dir/src/Container.cpp.obj: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/src/Container.cpp.obj: CMakeFiles/Project.dir/includes_CXX.rsp
 CMakeFiles/Project.dir/src/Container.cpp.obj: ../src/Container.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Andreia Gouveia\Documents\Aulas\CAL\CAL-Projecto\Project\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Project.dir/src/Container.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Andreia Gouveia\Documents\Aulas\CAL\CAL-Projecto\Project\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Project.dir/src/Container.cpp.obj"
 	C:\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project.dir\src\Container.cpp.obj -c "C:\Users\Andreia Gouveia\Documents\Aulas\CAL\CAL-Projecto\Project\src\Container.cpp"
 
 CMakeFiles/Project.dir/src/Container.cpp.i: cmake_force
@@ -143,7 +115,7 @@ CMakeFiles/Project.dir/src/Container.cpp.s: cmake_force
 CMakeFiles/Project.dir/src/Station.cpp.obj: CMakeFiles/Project.dir/flags.make
 CMakeFiles/Project.dir/src/Station.cpp.obj: CMakeFiles/Project.dir/includes_CXX.rsp
 CMakeFiles/Project.dir/src/Station.cpp.obj: ../src/Station.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Andreia Gouveia\Documents\Aulas\CAL\CAL-Projecto\Project\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Project.dir/src/Station.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Andreia Gouveia\Documents\Aulas\CAL\CAL-Projecto\Project\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Project.dir/src/Station.cpp.obj"
 	C:\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Project.dir\src\Station.cpp.obj -c "C:\Users\Andreia Gouveia\Documents\Aulas\CAL\CAL-Projecto\Project\src\Station.cpp"
 
 CMakeFiles/Project.dir/src/Station.cpp.i: cmake_force
@@ -159,8 +131,6 @@ Project_OBJECTS = \
 "CMakeFiles/Project.dir/src/main.cpp.obj" \
 "CMakeFiles/Project.dir/src/Truck.cpp.obj" \
 "CMakeFiles/Project.dir/src/Node.cpp.obj" \
-"CMakeFiles/Project.dir/src/Loader.cpp.obj" \
-"CMakeFiles/Project.dir/src/Load.cpp.obj" \
 "CMakeFiles/Project.dir/src/Container.cpp.obj" \
 "CMakeFiles/Project.dir/src/Station.cpp.obj"
 
@@ -170,15 +140,13 @@ Project_EXTERNAL_OBJECTS =
 Project.exe: CMakeFiles/Project.dir/src/main.cpp.obj
 Project.exe: CMakeFiles/Project.dir/src/Truck.cpp.obj
 Project.exe: CMakeFiles/Project.dir/src/Node.cpp.obj
-Project.exe: CMakeFiles/Project.dir/src/Loader.cpp.obj
-Project.exe: CMakeFiles/Project.dir/src/Load.cpp.obj
 Project.exe: CMakeFiles/Project.dir/src/Container.cpp.obj
 Project.exe: CMakeFiles/Project.dir/src/Station.cpp.obj
 Project.exe: CMakeFiles/Project.dir/build.make
 Project.exe: CMakeFiles/Project.dir/linklibs.rsp
 Project.exe: CMakeFiles/Project.dir/objects1.rsp
 Project.exe: CMakeFiles/Project.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Andreia Gouveia\Documents\Aulas\CAL\CAL-Projecto\Project\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable Project.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Andreia Gouveia\Documents\Aulas\CAL\CAL-Projecto\Project\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Project.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Project.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

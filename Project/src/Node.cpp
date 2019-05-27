@@ -37,3 +37,8 @@ void Node::setY_Coord(float y_coord) {
 float Node::distance(Node &n) {
     return sqrt(pow(x_coord - n.getX_Coord(), 2) + pow(y_coord - n.getY_Coord(), 2));
 }
+
+bool Node::operator ==(Node n)
+{
+    return this->getID() == n.getID();
+}

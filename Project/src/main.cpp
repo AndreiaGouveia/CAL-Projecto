@@ -1,11 +1,14 @@
 #include <iostream>
 
-#include "Load.h"
+#include "Loader.h"
+#include "Graph.h"
 
 using namespace std;
 
 int main() {
-    LoadTags();
+    Graph<Node> a;
+    LoadNodes(a);
+    LoadEdges(a);
     system("pause");
     return 0;
 }

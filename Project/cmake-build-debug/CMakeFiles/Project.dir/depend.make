@@ -24,6 +24,10 @@ CMakeFiles/Project.dir/src/Station.cpp.obj: ../src/Station.h
 CMakeFiles/Project.dir/src/Truck.cpp.obj: ../src/Truck.cpp
 CMakeFiles/Project.dir/src/Truck.cpp.obj: ../src/Truck.h
 
+CMakeFiles/Project.dir/src/main.cpp.obj: ../src/Graph.h
 CMakeFiles/Project.dir/src/main.cpp.obj: ../src/Load.h
+CMakeFiles/Project.dir/src/main.cpp.obj: ../src/Loader.h
+CMakeFiles/Project.dir/src/main.cpp.obj: ../src/MutablePriorityQueue.h
+CMakeFiles/Project.dir/src/main.cpp.obj: ../src/Node.h
 CMakeFiles/Project.dir/src/main.cpp.obj: ../src/main.cpp
 

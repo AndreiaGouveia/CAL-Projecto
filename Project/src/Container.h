@@ -8,16 +8,7 @@
 #include <ctime>
 #include <cstdlib>
 #include "Node.h"
-
-#define NoLimit numeric_limits<int>::max()
-
-
-enum types_of_waste {
-    paper,
-    plastic,
-    glass,
-    domestic
-};
+#include "Utils.h"
 
 class Container : public Node {
     enum types_of_waste waste;

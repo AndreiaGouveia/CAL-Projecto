@@ -1,7 +1,3 @@
-//
-// Created by Andreia Gouveia on 27/05/2019.
-//
-
 #ifndef CAL_PROJECTO_FULLGRAPH_H
 #define CAL_PROJECTO_FULLGRAPH_H
 
@@ -10,6 +6,7 @@
 #include "Container.h"
 #include "Station.h"
 #include "Truck.h"
+#include "Utils.h"
 
 class FullGraph {
 

@@ -3,26 +3,19 @@
 using namespace std;
 
 Container::Container() {
-    max_capacity_rate= 0.75;
+    max_capacity = NoLimit;
     waste = domestic;
     capacity = 0;
     capacity_rate = 0.0;
+    toRecover = false;
 };
 
 Container::Container(float max, enum types_of_waste waste) {
     max_capacity = max;
-    max_capacity_rate =0.75;
     this->waste = waste;
     capacity = 0;
     capacity_rate = 0.0;
-}
-
-int Container::getMax_capacity_rate() {
-    return max_capacity_rate;
-}
-
-void Container::setMax_capacity_rate(float rate) {
-    max_capacity_rate = rate;
+    toRecover = false;
 }
 
 enum types_of_waste Container::getWaste() {
@@ -41,10 +34,31 @@ float Container::getCapacityRate() {
     return capacity_rate;
 }
 
-void Container::updateCapacity(float waste_volume) {
-    if ((capacity + waste_volume) <= max_capacity && capacity_rate <= 100.0) {
-        capacity += waste_volume;
-        capacity_rate = (capacity / max_capacity) * 100;
+bool Container::getToRecover() {
+    return toRecover;
+}
+
+void Container::setToRecover(bool recover) {
+    this->toRecover = recover;
+}
+
+void Container::updateCapacity() {
+    float r = rand() % a + b;
+    a = 101-r;
+    b = r;
+    capacity = (r/100) * max_capacity;
+    capacity_rate = (r/100);
+
+    if (capacity_rate > 0.75) {
+        cout << "Needs recover" << endl;
+        setToRecover(true);
     }
 }
 
+void Container::emptyContainer() {
+    a = 101;
+    b = 0;
+    capacity = 0;
+    capacity_rate = 0.0;
+    setToRecover(false);
+};

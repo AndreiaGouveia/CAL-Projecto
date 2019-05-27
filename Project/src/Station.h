@@ -11,7 +11,11 @@
 class Station : public Node {
 
 private:
-    int id;
+    bool station; //temporary, dunno what to put here, to MODIFY
+
+public:
+    Station(int id, float x, float y, bool station);
+    bool isStation();
 
 };
 

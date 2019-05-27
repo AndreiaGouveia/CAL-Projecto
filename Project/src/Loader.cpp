@@ -1,7 +1,30 @@
 
   #include "Loader.h"
+/*
+ *
+ * Aux function for node loader
+ *
+ */
+  int tagExists(int id , vector<vector<int>> tags)
+  {
+      int counter = 0;
 
+      for (;counter<tags.size();counter++)
+      {
+          if(find(tags[counter].begin(),tags[counter].end(),id)!=tags[counter].end())
+          {
+              return counter;
+          }
+          counter++;
+      }
+      return 3;
+  }
+
+  /*
+  * Loader functions
+  */
 void LoadNodes(Graph<Node> &graph) {
+
     string line;
     int numNodes;
     ifstream file("C:\\Users\\Andreia Gouveia\\Documents\\Aulas\\CAL\\CAL-Projecto\\T02\\Porto\\T02_nodes_X_Y_Porto.txt");
@@ -35,7 +58,8 @@ void LoadNodes(Graph<Node> &graph) {
         sLine >> space;
         sLine >> y;
 
-        Node point = Node(id, x, y);
+        Node point = Node(id,x,y);
+
         graph.addVertex(point);
         graph.getVertexSet()[graph.getNumVertex() - 1]->setID(id); //Setting a id to be easier to create the edges
     }

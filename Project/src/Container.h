@@ -5,9 +5,12 @@
 #include <vector>
 #include <string>
 #include <limits>
+#include <ctime>
+#include <cstdlib>
 #include "Node.h"
 
-#define INF numeric_limits<int>::max()
+#define NoLimit numeric_limits<int>::max()
+
 
 enum types_of_waste {
     paper,
@@ -18,20 +21,22 @@ enum types_of_waste {
 
 class Container : public Node {
     enum types_of_waste waste;
-    float max_capacity_rate;        //max that is interesting for a truck to pick up
     float max_capacity;             //max capacity that a container can have
     float capacity;                 //current capacity of the container
     float capacity_rate;            //percentage currently occupied
+    bool toRecover;
+    int a = 101, b = 0;
 public:
     Container();
     Container(float max, enum types_of_waste waste);   //limited capacity truck
-    int getMax_capacity_rate();
-    void setMax_capacity_rate(float rate);             //set new truck volume
     enum types_of_waste getWaste();
     void setWaste(enum types_of_waste waste);
     float getCapacity();
     float getCapacityRate();
-    void updateCapacity(float waste_volume);
+    bool getToRecover();
+    void setToRecover(bool recover);
+    void updateCapacity();
+    void emptyContainer();
 };
 
 

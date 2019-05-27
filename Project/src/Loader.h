@@ -6,6 +6,9 @@
 #include <sstream>
 #include "Graph.h"
 #include "Node.h"
+#include <algorithm>
+#include "Station.h"
+
 
 void LoadNodes(Graph<Node> & graph);
 void LoadEdges(Graph<Node> & graph);

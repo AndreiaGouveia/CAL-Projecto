@@ -8,7 +8,7 @@ void LoadNodes(Graph<Node> &graph) {
 
     string line;
     int numNodes;
-    ifstream file("C:\\Users\\Andreia Gouveia\\Documents\\Aulas\\CAL-Projecto\\Project\\Nodes_Porto\\T02_nodes_X_Y_Porto.txt");
+    ifstream file("..\\Nodes_Porto\\T02_nodes_X_Y_Porto.txt");
 
     if(!file.is_open()) {
         cout << "Error opening file" << endl;
@@ -61,7 +61,7 @@ void LoadNodes(Graph<Node> &graph) {
 void LoadEdges(Graph<Node> &graph) {
     string line;
     int numEdges;
-    ifstream file("C:\\Users\\Andreia Gouveia\\Documents\\Aulas\\CAL-Projecto\\Project\\Nodes_Porto\\T02_edges_Porto.txt");
+    ifstream file("..\\Nodes_Porto\\T02_edges_Porto.txt");
 
     if(!file.is_open()) {
         cout << "Error opening file" << endl;
@@ -127,7 +127,7 @@ vector<vector<int>> LoadTags() {
     int id;
     int counter = 0;
     int numberOfObjects;
-    ifstream file("C:\\Users\\Andreia Gouveia\\Documents\\Aulas\\CAL-Projecto\\Project\\Nodes_Porto\\T02_tags_Porto.txt");//COLOCAR O PROPIO PATH, SENAO NAO FUNCIONA
+    ifstream file("..\\Nodes_Porto\\T02_tags_Porto.txt");
 
     if(!file.is_open()) {
         cout << "Error opening file" << endl;
@@ -163,7 +163,7 @@ vector<vector<int>> LoadTags() {
         ids.clear();
         counter = 0;
     }
-    cout << "Finished loading nodes..." << endl;
+    cout << "Tags successfully loaded!" << endl;
 
     file.close();
 

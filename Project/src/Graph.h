@@ -11,14 +11,13 @@
 #include <cmath>
 #include <iostream>
 #include "MutablePriorityQueue.h"
+#include "Utils.h"
 
 using namespace std;
 
 template <class T> class Edge;
 template <class T> class Graph;
 template <class T> class Vertex;
-
-#define INF std::numeric_limits<double>::max()
 
 //////////////////////////////////////////////////////////
 /////           VERTEX                               /////

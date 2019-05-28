@@ -65,14 +65,12 @@ bool FullGraph::addTruck(Truck * truck) { //add truck
     return true;
 }
 
-bool FullGraph::addStation(Station * station) //add station
-{
+bool FullGraph::addStation(Station * station) { //add station
     stations.push_back(station);
     return true;
 }
 
-bool FullGraph::addContainer(Container * container) //add container
-{
+bool FullGraph::addContainer(Container * container) { //add container
     containers.push_back(container);
     return true;
 }
@@ -87,25 +85,27 @@ void FullGraph::showGraphViewer() {
     GraphViewer *gv = new GraphViewer(900, 900, false);
     gv->createWindow(900, 900);
     cout << "Window created" << endl;
-    int counter = 0;
+    int id = 1;
 
     for (size_t i = 0; i < graph.getVertexSet().size(); i++) {
         gv->addNode(graph.getVertexSet()[i]->getID(), (graph.getVertexSet()[i]->getInfo().getX_Coord()-526000)/10, (graph.getVertexSet()[i]->getInfo().getY_Coord()-4554200)/10);
-        counter++;
     }
-    cout << counter << endl;
+    for (size_t i = 0; i < graph.getVertexSet().size(); i++) {
+        for (size_t j = 0; j < graph.getVertexSet()[i]->getAdj().size(); j++) {
+            gv->addEdge(id, graph.getVertexSet()[i]->getID(), graph.getVertexSet()[i]->getAdj()[j].getDest()->getID(), 1);
+            id++;
+        }
+    }
 
     gv->rearrange();
 
     cout << "Display is done" << endl;
 }
-vector<Container *> FullGraph::getContainers()
-        {
-            return containers;
-        }
+vector<Container *> FullGraph::getContainers() {
+    return containers;
+}
 
-vector<Station *> FullGraph::getStations()
-{
+vector<Station *> FullGraph::getStations() {
     return stations;
 }
 
@@ -113,8 +113,7 @@ vector<Truck *> FullGraph::getTrucks(){
     return trucks;
 }
 
-vector<Vertex<Node>> FullGraph::pathSingleTruckSingleContainer(Truck * t, Container * c)
-{
+vector<Vertex<Node>> FullGraph::pathSingleTruckSingleContainer(Truck * t, Container * c) {
     Station * s = getStations()[0];
     Node * station = new Node(s->getID(),s->getX_Coord(),s->getY_Coord());
     cout<<"Station id"<<station->getID()<<endl;
@@ -127,24 +126,19 @@ vector<Vertex<Node>> FullGraph::pathSingleTruckSingleContainer(Truck * t, Contai
     //get path between truck and container
     path = graph.getfloydWarshallPath(*truck,*container);
     cout<<"gets through it"<<endl;
-    if(path.empty())
-    {
+    if(path.empty()) {
         cout<<"!!first path empty!!!"<<endl;
     }
 
     //vector of nodes to vector of vertex
     vector<Vertex<Node>> result;
-    for(auto x: path)
-    {
+    for(auto x: path) {
         Vertex<Node> * temp = graph.findVertex(x);
-        if(temp == nullptr)
-        {
+        if(temp == nullptr) {
             cout<<"erros"<<endl;
             continue;
         }
         result.push_back(*temp);
     }
-
     return result;
-
 }

@@ -50,6 +50,7 @@ public:
     Vertex *getPath() const;
     int getID() const;
     void setID(int new_id);
+    vector<Edge<T>> getAdj();
 };
 
 template <class T>
@@ -118,8 +119,12 @@ void Vertex<T>::setID(int new_id) {
 }
 
 template <class T>
-bool operator==(Vertex<T> a, Vertex<T> b)
-{
+vector<Edge<T>> Vertex<T>::getAdj() {
+    return this->adj;
+}
+
+template <class T>
+bool operator==(Vertex<T> a, Vertex<T> b) {
     return a.getID() == b.getID();
 }
 
@@ -134,12 +139,18 @@ class Edge {
     vector<Vertex<T>*> hidden;
 public:
     Edge(Vertex<T> *d, double w);
+    Vertex<T> * getDest();
     friend class Graph<T>;
     friend class Vertex<T>;
 };
 
 template <class T>
 Edge<T>::Edge(Vertex<T> *d, double w): dest(d), weight(w) {}
+
+template <class T>
+Vertex<T> * Edge<T>::getDest() {
+    return this->dest;
+}
 
 /////////////////////////////////////////////////////////
 /////           GRAPH                               /////

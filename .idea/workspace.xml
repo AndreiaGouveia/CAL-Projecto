@@ -11,12 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="110aa637-b42f-40d4-a252-3c5fe21194b1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Project/src/FullGraph.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/FullGraph.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/src/FullGraph.h" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/FullGraph.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/src/Node.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/Node.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/src/Node.h" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/Node.h" afterDir="false" />
-    </list>
+    <list default="true" id="110aa637-b42f-40d4-a252-3c5fe21194b1" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/Project/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -48,12 +43,11 @@
         <entry file="file://$PROJECT_DIR$/Project/src/Graph.h">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="127">
-              <caret line="297" column="7" selection-start-line="297" selection-start-column="4" selection-end-line="297" selection-end-column="7" />
+              <caret line="308" column="7" selection-start-line="308" selection-start-column="4" selection-end-line="308" selection-end-column="7" />
               <folding>
                 <element signature="e#53#70#0" expanded="true" />
-                <element signature="e#1555#1564#0" expanded="true" />
-                <element signature="e#1634#1643#0" expanded="true" />
-                <element signature="e#1824#1833#0" expanded="true" />
+                <element signature="e#5145#5154#0" expanded="true" />
+                <element signature="e#7130#7139#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -68,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Project/src/FullGraph.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="453">
-              <caret line="203" column="16" selection-start-line="203" selection-start-column="16" selection-end-line="203" selection-end-column="16" />
+            <state relative-caret-position="243">
+              <caret line="206" column="42" lean-forward="true" selection-start-line="206" selection-start-column="42" selection-end-line="206" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -102,7 +96,7 @@
         <entry file="file://$PROJECT_DIR$/Project/src/FullGraph.h">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
-              <caret line="28" column="7" lean-forward="true" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
+              <caret line="28" column="7" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -171,7 +165,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="962" />
     <option name="width" value="965" />
     <option name="height" value="1208" />
@@ -264,12 +258,12 @@
       <workItem from="1558912151346" duration="6544000" />
       <workItem from="1559006057491" duration="734000" />
       <workItem from="1559040168011" duration="48000" />
-      <workItem from="1559040245438" duration="23862000" />
+      <workItem from="1559040245438" duration="24576000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65888000" />
+    <option name="totallyTimeSpent" value="66602000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -281,15 +275,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="974" extended-state="6" />
+    <frame x="770" y="0" width="772" height="966" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12013423" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.2514045" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.29097387" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.29376498" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -454,23 +448,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project/src/Truck.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
-          <folding>
-            <element signature="e#49#68#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project/src/Truck.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-16">
-          <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Project/src/Node.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="355">
@@ -520,19 +497,18 @@
     <entry file="file://$PROJECT_DIR$/Project/src/FullGraph.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="28" column="7" lean-forward="true" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
+          <caret line="28" column="7" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Project/src/Graph.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="127">
-          <caret line="297" column="7" selection-start-line="297" selection-start-column="4" selection-end-line="297" selection-end-column="7" />
+          <caret line="308" column="7" selection-start-line="308" selection-start-column="4" selection-end-line="308" selection-end-column="7" />
           <folding>
             <element signature="e#53#70#0" expanded="true" />
-            <element signature="e#1555#1564#0" expanded="true" />
-            <element signature="e#1634#1643#0" expanded="true" />
-            <element signature="e#1824#1833#0" expanded="true" />
+            <element signature="e#5145#5154#0" expanded="true" />
+            <element signature="e#7130#7139#0" expanded="true" />
           </folding>
         </state>
       </provider>

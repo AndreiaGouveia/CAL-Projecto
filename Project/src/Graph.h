@@ -28,6 +28,8 @@ class Vertex {
     int id;
     T info;                // contents
     vector<Edge<T> > adj;  // list of outgoing edges
+    vector<Vertex<T>*> in; // list of vertexes that go into this vertex
+    bool hidden;           // used to preProccess
     bool visited;          // auxiliary field used by dfs and bfs
     bool processing;       // auxiliary field used by isDAG
     int indegree;          // auxiliary field used by topsort
@@ -38,6 +40,7 @@ class Vertex {
     void addEdge(Vertex<T> *dest, double w);
     bool removeEdgeTo(Vertex<T> *d);
 public:
+    size_t posAtVec;        //saves the position of the vertex in the graph's vertexSet
     Vertex(T in);
     friend class Graph<T>;
     bool operator<(Vertex<T> & vertex) const; // // required by MutablePriorityQueue
@@ -50,11 +53,9 @@ public:
 };
 
 template <class T>
-vector <Edge<T>> Vertex<T>::getEdges()
-{
+vector <Edge<T>> Vertex<T>::getEdges() {
     return adj;
 }
-
 
 template <class T>
 Vertex<T>::Vertex(T in): info(in) {}
@@ -117,7 +118,7 @@ void Vertex<T>::setID(int new_id) {
 template <class T>
 bool operator==(Vertex<T> a, Vertex<T> b)
 {
-    return a.getID()==b.getID();
+    return a.getID() == b.getID();
 }
 
 /////////////////////////////////////////////////////////
@@ -128,6 +129,7 @@ template <class T>
 class Edge {
     Vertex<T> * dest;      // destination vertex
     double weight;         // edge weight
+    vector<Vertex<T>*> hidden;
 public:
     Edge(Vertex<T> *d, double w);
     friend class Graph<T>;
@@ -159,6 +161,7 @@ public:
     int getNumVertex() const;
     vector<Vertex<T>*> getVertexSet() const;
     bool addVertex(const T &in);
+    bool addVertexPointer(Vertex<T> * in);
     bool removeVertex(const T &in);
     bool addEdge(const T &sourc, const T &dest, double w);
     bool removeEdge(const T &sourc, const T &dest);
@@ -286,6 +289,17 @@ bool Graph<T>::addVertex(const T &in) {
     if ( findVertex(in) != nullptr)
         return false;
     vertexSet.push_back(new Vertex<T>(in));
+    return true;
+}
+
+template<class T>
+bool Graph<T>::addVertexPointer(Vertex<T> * in) {
+    typename vector<Vertex<T> *>::iterator it = vertexSet.begin();
+    typename vector<Vertex<T> *>::iterator ite = vertexSet.end();
+    for (; it != ite; it++)
+        if ((*it)->info == in->info) return false;
+    in->posAtVec = vertexSet.size();
+    vertexSet.push_back(in);
     return true;
 }
 
@@ -559,6 +573,60 @@ int Graph<T>::vertexPrev(int i, int j) {
     }
 
     return -1;
+}
+
+template<class T>
+Graph<T> * Graph<T>::preProcessGraph() {
+    cout << "Preprocessing...";
+    Graph<T> * newGraph = new Graph<T>;
+
+    for (auto v : vertexSet)
+        v->hidden = false;
+
+    int counter = 0;
+    int counterNotFixed = 0;
+
+    for (auto v : vertexSet) {
+        if (v->adj.size() == 1 && v->in.size() == 1) {
+            counterNotFixed++;
+            Edge<T> edge = Edge<T>(nullptr, 0);
+            bool found = false;
+            typename vector<Edge<T>>::iterator it;
+            for (it = v->in[0]->adj.begin(); it != v->in[0]->adj.end(); it++) {
+                if (it->dest == v) {
+                    found = true;
+                    edge = (*it);
+                    break;
+                }
+            }
+            if (found) {
+                Edge<T> res = Edge<T>(v->adj[0].dest, edge.weight + v->adj[0].weight);
+                for (auto vertex : edge.hidden) {
+                    res.hidden.push_back(vertex);
+                }
+                res.hidden.push_back(v);
+                for(auto vertex : v->adj[0].hidden) {
+                    res.hidden.push_back(v);
+                }
+                v->in[0]->adj.erase(it);
+                v->in[0]->adj.push_back(res);
+                for (auto i = v->adj[0].dest->in.begin(); i != v->adj[0].dest->in.end(); i++) {
+                    if ((*i)->getInfo() == v->getInfo()) {
+                        v->adj[0].dest->in.erase(i);
+                        counter++;
+                        break;
+                    }
+                }
+                v->adj[0].dest->in.push_back(v->in[0]);
+                v->hidden = true;
+            }
+        }
+    }
+    for (auto v : vertexSet)
+        if (!v->hidden)
+            newGraph->addVertexPointer(v);
+    cout << "Done(" << counter << " Redundant Nodes, "<< counterNotFixed  <<" Found)" << endl;
+    return newGraph;
 }
 
 #endif /* GRAPH_H_ */

@@ -11,34 +11,28 @@
 #include "Loader.h"
 
 class FullGraph {
-
 public:
-
     /*
      * Vectors and Matrix
      */
-    Graph<Node>  mapGraph; //graph originated from the maps
-    Graph<Node>  graph; //graph after preprocess
+    Graph<Node> mapGraph; //graph originated from the maps
+    Graph<Node> graph; //graph after preprocess
     vector<vector< Node >> edgesMatrix; //matrix of edges
     vector<Truck *> trucks;
     vector<Container*> containers;
-    vector<Station *> stations;
+    vector<Station*> stations;
     vector<int> containerIds;
 
     /*
      * Functions
      */
     FullGraph();
-
-    FullGraph & preProcessGraph(); //preprocess the graph
-
+    FullGraph * preProcessGraph(); //preprocess the graph -> GRAPH.H
     bool addTruck(Truck * truck); //add truck
-
     bool addStation(Station * station); //add station
-
     bool addContainer(Container * container); //add container
+    vector<int> getContainerIds(); //get containers IDs
 
-    vector<int> getContainerIds();
 
     void floydWarshallShortestPath();
 

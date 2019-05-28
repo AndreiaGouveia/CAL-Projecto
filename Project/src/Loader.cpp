@@ -109,7 +109,7 @@ void LoadEdges(Graph<Node> &graph) {
     if (numEdges == counter) {
         cout << "Edges successfully loaded!" << endl;
     } else {
-        cout << "An unexpected error happened, please reinitialize the program." << endl;
+        cout << "An unexpected error happened, please reinitialize the program. " << endl;
         file.close();
         exit(1);
     }

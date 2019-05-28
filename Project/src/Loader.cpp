@@ -47,7 +47,8 @@ void LoadNodes(Graph<Node> &graph) {
 
     if (numNodes == graph.getNumVertex()) {
         cout << "Nodes successfully loaded!" << endl;
-    } else {
+    }
+    else {
         cout << "nodes : " << graph.getNumVertex() << "     expected: " << numNodes << endl;
         cout << "An unexpected error happened, please reinitialize the program." << endl;
         file.close();
@@ -134,7 +135,7 @@ vector<vector<int>> LoadTags() {
 
     getline(file, line);//this first line doesn't matter to us
 
-    cout << "Loading nodes..." << endl;
+    cout << "Loading tags..." << endl;
 
     for (int nrTags = 0; nrTags < 3; nrTags++) {
 
@@ -161,7 +162,7 @@ vector<vector<int>> LoadTags() {
         ids.clear();
         counter = 0;
     }
-    cout << "Tags successfully loaded!" << endl;
+    cout << "Tags successfully loaded!" << endl << endl;
 
     file.close();
 

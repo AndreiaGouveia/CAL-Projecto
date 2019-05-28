@@ -571,11 +571,14 @@ int Graph<T>::vertexPrev(int i, int j) {
 
 template<class T>
 Graph<T> * Graph<T>::preProcessGraph() {
-    cout << "Preprocessing...";
+    cout << "Preprocessing..." << endl;
     Graph<T> * newGraph = new Graph<T>;
 
-    for (auto v : vertexSet)
+    for (auto v : vertexSet) {
         v->hidden = false;
+    }
+
+    cout << vertexSet.size() << endl; //Retirar, SÓ PARA TESTE
 
     int counter = 0;
     int counterNotFixed = 0;

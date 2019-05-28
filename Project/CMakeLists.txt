@@ -22,4 +22,4 @@ add_executable(Project
         src/connection.cpp src/connection.h
         src/edgetype.h
         src/graphviewer.cpp src/graphviewer.h
-        src/GraphViewerController.jar)
+        GraphViewerController.jar)

@@ -259,12 +259,6 @@ vector<T> Graph<T>::getfloydWarshallPath(const T &orig, const T &dest) const{
 }
 
 template <class T>
-Graph<T> * Graph<T>::preProcessGraph()//aggregates Vertexes that can be aggregated to otimize the other graph functions
-{
-
-}
-
-template <class T>
 vector<Vertex<T>*> Graph<T>::getVertexSet() const {
     return vertexSet;
 }

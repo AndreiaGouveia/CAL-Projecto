@@ -5,36 +5,47 @@
 
 void addTags(vector<Container* > &containers, vector<Station*> &stations, vector<vector<int>> &tags, vector<Vertex<Node>*> &nodes) {
     /*
-     * GET NORMAL CONTAINERS
-     */
-    for(int i : tags[0]) {
+    * GET NORMAL CONTAINERS
+    */
+    for(int i=0 ; i<tags[0].size(); i++)
+    {
         for (auto x: nodes) {
-            if (x->getID() == i) {
-                containers.push_back(new Container(x->getID(), x->getInfo().getX_Coord(), x->getInfo().getY_Coord()));
+
+            if (x->getID() == tags[0][i])//found vertex with same id
+            {
+                containers.push_back(new Container(x->getID(),x->getInfo().getX_Coord(),x->getInfo().getY_Coord()));
                 break;
             }
         }
 
     }
+
     /*
      * GET RECYCLING CONTAINERS
      */
-    for(int i : tags[1]) {
-        for (auto node : nodes) {
-            if (node->getID() == i) { //found vertex with same id
+    for(int i=0 ; i<tags[1].size(); i++)
+    {
+        for (auto x: nodes) {
+
+            if (x->getID() == tags[1][i])//found vertex with same id
+            {
                 types_of_waste waste = paper;//MAKE THIS RANDOM
-                containers.push_back(new Container(node->getID(), node->getInfo().getX_Coord(), node->getInfo().getY_Coord(), NoLimit, waste));
+                containers.push_back(new Container(x->getID(),x->getInfo().getX_Coord(),x->getInfo().getY_Coord(),NoLimit,waste));
                 break;
             }
         }
     }
+
     /*
      * GET STATIONS
      */
-    for(int i : tags[2]) {
-        for (auto node : nodes) {
-            if (node->getID() == tags[2][i]) {     //found vertex with same id
-                stations.push_back(new Station(node->getID(), node->getInfo().getX_Coord(), node->getInfo().getY_Coord(), true));
+    for(int i=0 ; i<tags[2].size(); i++)
+    {
+        for (auto x: nodes) {
+
+            if (x->getID() == tags[2][i])//found vertex with same id
+            {
+                stations.push_back(new Station(x->getID(),x->getInfo().getX_Coord(),x->getInfo().getY_Coord(),true));
                 break;
             }
         }

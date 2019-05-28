@@ -28,7 +28,6 @@ public:
     void updateCapacity(float waste_volume);
     Node getInitialLocation();
     int getID();
-    Node getInitialLocation();
 };
 
 

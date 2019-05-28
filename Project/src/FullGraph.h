@@ -47,16 +47,6 @@ public:
     GraphViewer createGraphView();
     void showGraphViewer(GraphViewer &gv);
     void paintNodes(GraphViewer &gv);
-    /*
-     * Functions to still implement
-     */
-    //FullGraph & displayRoads();
-    // FullGraph & randomizeEdges(int nIntersections);
-
-    //vector<Vertex<Node> * > generateOneTruckMultipleContainers(Truck * t, Station * s);
-    //vector<vector<Vertex<Node> * >> generateMultipleTrucskMultipleContainers(Station * s, double trucksVolume);
-    //vector<Vertex<Node> *> backPreProcess(vector<Vertex<Node>* > shortenedPath);
-    //void recalculateDistContainers(int currentVertexPos, bool isSort);
 
 
 };

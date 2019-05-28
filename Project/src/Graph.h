@@ -67,7 +67,9 @@ Vertex<T>::Vertex(T in): info(in) {}
 template <class T>
 
 void Vertex<T>::addEdge(Vertex<T> *d, double w) {
-    adj.push_back(Edge<T>(d, w));
+    Edge<T> edge = Edge<T>(d, this->info.distance(d->info));
+    edge.dest->in.push_back(this);
+    adj.push_back(edge);
 }
 
 /*
@@ -619,9 +621,11 @@ Graph<T> * Graph<T>::preProcessGraph() {
             }
         }
     }
-    for (auto v : vertexSet)
-        if (!v->hidden)
+    for (auto v : vertexSet) {
+        if (!v->hidden) {
             newGraph->addVertexPointer(v);
+        }
+    }
     cout << "Done(" << counter << " Redundant Nodes, "<< counterNotFixed  <<" Found)" << endl;
     return newGraph;
 }

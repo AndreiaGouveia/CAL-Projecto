@@ -82,10 +82,18 @@ vector<int> FullGraph::getContainerIds() { //get containers IDs
 }
 
 void FullGraph::showGraphViewer() {
-    /*GraphViewer *gv = new GraphViewer(2000, 2000, false);
-    gv->createWindow(1000, 1000);
+    GraphViewer *gv = new GraphViewer(900, 900, false);
+    gv->createWindow(900, 900);
+    cout << "Window created" << endl;
+    int counter = 0;
 
     for (size_t i = 0; i < graph.getVertexSet().size(); i++) {
+        gv->addNode(graph.getVertexSet()[i]->getID(), (graph.getVertexSet()[i]->getInfo().getX_Coord()-526000)/10, (graph.getVertexSet()[i]->getInfo().getY_Coord()-4554200)/10);
+        counter++;
+    }
+    cout << counter << endl;
 
-    }*/
+    gv->rearrange();
+
+    cout << "Display is done" << endl;
 }

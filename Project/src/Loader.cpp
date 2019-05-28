@@ -34,7 +34,6 @@ void LoadNodes(Graph<Node> &graph) {
 
         getline(sLine, aux, ',');
         id = stoi(aux);
-        sLine >> space;
         sLine >> x;
         sLine >> space;
         sLine >> y;

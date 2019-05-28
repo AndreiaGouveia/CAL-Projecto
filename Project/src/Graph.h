@@ -626,6 +626,7 @@ Graph<T> * Graph<T>::preProcessGraph() {
             newGraph->addVertexPointer(v);
         }
     }
+    cout << newGraph->vertexSet.size() << endl;
     cout << "Done(" << counter << " Redundant Nodes, "<< counterNotFixed  <<" Found)" << endl;
     return newGraph;
 }

@@ -8,17 +8,16 @@
 #include "Utils.h"
 #include "Node.h"
 
-class Truck {
+class Truck : public Node {
     static int idg;
     const int id;
     int volume;
     enum types_of_waste waste;
     float capacity;                 //capacity of the truck occupied with garbage
     float capacity_rate;            //percentage occupied;
-    Node initialLocation;
 public:
-    Truck();                                        //unlimited capacity truck
-    Truck(int volume, enum types_of_waste waste);   //limited capacity truck
+    Truck(Node initialLocation);                                        //unlimited capacity truck
+    Truck(int volume, enum types_of_waste waste,Node initialLocation);   //limited capacity truck
     int getVolume();
     void setVolume(int volume);             //set new truck volume
     enum types_of_waste getWaste();
@@ -26,8 +25,7 @@ public:
     float getCapacity();
     float getCapacityRate();
     void updateCapacity(float waste_volume);
-    Node getInitialLocation();
-    int getID();
+    int getId();
 };
 
 

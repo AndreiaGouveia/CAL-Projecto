@@ -580,8 +580,6 @@ Graph<T> * Graph<T>::preProcessGraph() {
         v->hidden = false;
     }
 
-    cout << vertexSet.size() << endl; //Retirar, SÓ PARA TESTE
-
     int counter = 0;
     int counterNotFixed = 0;
 

@@ -81,6 +81,8 @@ vector<int> FullGraph::getContainerIds() { //get containers IDs
     return containerIds;
 }
 
+
+
 void FullGraph::showGraphViewer() {
     /*GraphViewer *gv = new GraphViewer(2000, 2000, false);
     gv->createWindow(1000, 1000);
@@ -88,4 +90,53 @@ void FullGraph::showGraphViewer() {
     for (size_t i = 0; i < graph.getVertexSet().size(); i++) {
 
     }*/
+}
+vector<Container *> FullGraph::getContainers()
+        {
+            return containers;
+        }
+
+vector<Station *> FullGraph::getStations()
+{
+    return stations;
+}
+
+vector<Truck *> FullGraph::getTrucks(){
+    return trucks;
+}
+
+vector<Vertex<Node>> FullGraph::pathSingleTruckSingleContainer(Truck * t, Container * c)
+{
+    Station * s = getStations()[0];
+    Node * station = new Node(s->getID(),s->getX_Coord(),s->getY_Coord());
+    cout<<"Station id"<<station->getID()<<endl;
+    Node * truck = new Node(t->getID(),t->getX_Coord(),t->getY_Coord());
+    cout<<"Truck id"<<truck->getID()<<endl;
+    Node * container = new Node(c->getID(),c->getX_Coord(),c->getY_Coord());
+    cout<<"Container id"<<container->getID()<<endl;
+
+    vector<Node> path;
+    //get path between truck and container
+    path = graph.getfloydWarshallPath(*truck,*container);
+    cout<<"gets through it"<<endl;
+    if(path.empty())
+    {
+        cout<<"!!first path empty!!!"<<endl;
+    }
+
+    //vector of nodes to vector of vertex
+    vector<Vertex<Node>> result;
+    for(auto x: path)
+    {
+        Vertex<Node> * temp = graph.findVertex(x);
+        if(temp == nullptr)
+        {
+            cout<<"erros"<<endl;
+            continue;
+        }
+        result.push_back(*temp);
+    }
+
+    return result;
+
 }

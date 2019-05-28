@@ -34,8 +34,11 @@ public:
     bool addContainer(Container * container); //add container
     vector<int> getContainerIds(); //get containers IDs
     void showGraphViewer();
+    vector<Container *> getContainers();
+    vector<Station *> getStations();
+    vector<Truck *> getTrucks();
 
-    void floydWarshallShortestPath();
+    //void floydWarshallShortestPath();
 
     vector<Vertex<Node>  > pathSingleTruckSingleContainer(Truck * t, Container * c);
     /*

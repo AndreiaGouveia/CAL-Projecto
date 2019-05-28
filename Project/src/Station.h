@@ -1,9 +1,5 @@
-//
-// Created by Andreia Gouveia on 26/05/2019.
-//
-
-#ifndef CAL_PROJECTO_SATION_H
-#define CAL_PROJECTO_SATION_H
+#ifndef CAL_PROJECTO_STATION_H
+#define CAL_PROJECTO_STATION_H
 
 #include "Node.h"
 
@@ -20,4 +16,4 @@ public:
 };
 
 
-#endif //CAL_PROJECTO_SATION_H
+#endif //CAL_PROJECTO_STATION_H

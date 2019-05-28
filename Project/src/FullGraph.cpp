@@ -3,28 +3,28 @@
 /**
  * Auxiliary Function for graph
  */
-void addTags(vector<Container* > & containers, vector<Station* > & stations,vector<vector<int>> &tags,vector<Vertex<Node>*> &nodes) {
+
+void addTags(vector<Container* > &containers, vector<Station*> &stations, vector<vector<int>> &tags, vector<Vertex<Node>*> &nodes) {
 
     /*
      * GET NORMAL CONTAINERS
      */
-    for(int i = 0; i < tags[0].size(); i++) {
-        for (auto x : nodes) {
-            if (x->getID() == tags[0][i]) { //found vertex with same id
+    for(int i : tags[0]) {
+        for (auto x: nodes) {
+            if (x->getID() == i) {
                 containers.push_back(new Container(x->getID(), x->getInfo().getX_Coord(), x->getInfo().getY_Coord()));
                 break;
             }
         }
     }
-
     /*
      * GET RECYCLING CONTAINERS
      */
-    for(int i = 0 ; i < tags[1].size(); i++) {
-        for (auto x: nodes) {
-            if (x->getID() == tags[1][i]) { //found vertex with same id
-                types_of_waste waste = paper;   //MAKE THIS RANDOM
-                containers.push_back(new Container(x->getID(), x->getInfo().getX_Coord(), x->getInfo().getY_Coord(), NoLimit, waste));
+    for(int i : tags[1]) {
+        for (auto node : nodes) {
+            if (node->getID() == i) { //found vertex with same id
+                types_of_waste waste = paper;//MAKE THIS RANDOM
+                containers.push_back(new Container(node->getID(), node->getInfo().getX_Coord(), node->getInfo().getY_Coord(), NoLimit, waste));
                 break;
             }
         }
@@ -33,31 +33,31 @@ void addTags(vector<Container* > & containers, vector<Station* > & stations,vect
     /*
      * GET STATIONS
      */
-    for(int i = 0 ; i < tags[2].size(); i++) {
-        for (auto x: nodes) {
-            if (x->getID() == tags[2][i]) {     //found vertex with same id
-                stations.push_back(new Station(x->getID(),x->getInfo().getX_Coord(),x->getInfo().getY_Coord(),true));
+    for(int i : tags[2]) {
+        for (auto node : nodes) {
+            if (node->getID() == tags[2][i]) {     //found vertex with same id
+                stations.push_back(new Station(node->getID(), node->getInfo().getX_Coord(), node->getInfo().getY_Coord(), true));
                 break;
             }
         }
     }
 }
 
-FullGraph::FullGraph()
-{
+FullGraph::FullGraph() {
     LoadNodes(mapGraph);
     LoadEdges(mapGraph);
 
     //distributing tags
     vector<vector<int>> tags = LoadTags();
-    vector<Vertex<Node>*> a = mapGraph.getVertexSet();
-    addTags(containers, stations, tags, a);//containers and stations filled
+    vector<Vertex<Node>*> nodes = mapGraph.getVertexSet();
+    addTags(containers, stations, tags, nodes);//containers and stations filled
 
 }
 
-/*FullGraph & FullGraph::preProcessGraph() { //preprocess the graph
-
-}*/
+FullGraph *FullGraph::preProcessGraph() { //preprocess the graph
+    mapGraph = * graph.preProcessGraph();
+    return this;
+}
 
 bool FullGraph::addTruck(Truck * truck) { //add truck
     trucks.push_back(truck);
@@ -74,7 +74,6 @@ bool FullGraph::addContainer(Container * container) { //add container
     return true;
 }
 
-vector<string> FullGraph::getContainerIds() { //get containers IDs
-    vector<string>a;
-    return a;
+vector<int> FullGraph::getContainerIds() { //get containers IDs
+    return containerIds;
 }

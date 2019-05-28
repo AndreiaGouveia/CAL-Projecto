@@ -6,6 +6,7 @@
 #include <string>
 #include <limits>
 #include "Utils.h"
+#include "Node.h"
 
 class Truck {
     static int idg;
@@ -14,6 +15,7 @@ class Truck {
     enum types_of_waste waste;
     float capacity;                 //capacity of the truck occupied with garbage
     float capacity_rate;            //percentage occupied;
+    Node initialLocation;
 public:
     Truck();                                        //unlimited capacity truck
     Truck(int volume, enum types_of_waste waste);   //limited capacity truck
@@ -25,6 +27,7 @@ public:
     float getCapacityRate();
     void updateCapacity(float waste_volume);
     int getID();
+    Node getInitialLocation();
 };
 
 

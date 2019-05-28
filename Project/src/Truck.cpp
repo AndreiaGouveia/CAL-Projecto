@@ -46,6 +46,11 @@ float Truck::getCapacityRate() {
     return capacity_rate;
 }
 
+/**
+ * Function to update the filled capacity of a truck
+ * If totally filled it goes to the closer station
+ * @param waste_volume
+ */
 void Truck::updateCapacity(float waste_volume) {
     if ((capacity + waste_volume) <= volume && capacity_rate <= 100.0) {
         capacity += waste_volume;

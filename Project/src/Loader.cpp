@@ -4,6 +4,11 @@
 * Loader functions
 */
 
+
+/**
+ * Function that loads the nodes to the graph passed as reference in the argument
+ * @param graph
+ */
 void LoadNodes(Graph<Node> &graph) {
 
     string line;
@@ -57,6 +62,10 @@ void LoadNodes(Graph<Node> &graph) {
     file.close();
 }
 
+/**
+ * Function that loads the edges to the graph passed as reference in the argument
+ * @param graph
+ */
 void LoadEdges(Graph<Node> &graph) {
     string line;
     int numEdges;
@@ -117,6 +126,11 @@ void LoadEdges(Graph<Node> &graph) {
     file.close();
 }
 
+/**
+ * Function that loads the tags to the graph passed as reference in the argument
+ * @param graph
+ * @return idAndAttributes
+ */
 vector<vector<int>> LoadTags() {
     vector<vector<int>> idAndAttributes;
     vector<int> ids;

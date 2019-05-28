@@ -44,6 +44,9 @@ void addTags(vector<Container* > &containers, vector<Station*> &stations, vector
     }
 }
 
+/**
+ * Graph constructor, with the necessary load of nodes and edges
+ */
 FullGraph::FullGraph() {
     LoadNodes(mapGraph);
     LoadEdges(mapGraph);
@@ -55,6 +58,9 @@ FullGraph::FullGraph() {
 
 }
 
+/**
+ * Function that calls the preProcessGraph() method at "Graph.h"
+ */
 FullGraph *FullGraph::preProcessGraph() { //preprocess the graph
     graph = * mapGraph.preProcessGraph();
     return this;
@@ -79,7 +85,12 @@ vector<int> FullGraph::getContainerIds() { //get containers IDs
     return containerIds;
 }
 
+/**
+ * Function that shows the GraphViewer, its nodes and edges
+ * @param gv
+ */
 void FullGraph::showGraphViewer(GraphViewer &gv) {
+    gv.createWindow(900, 900);
     cout << endl << "Window created" << endl;
     int id = 1;
 
@@ -98,6 +109,10 @@ void FullGraph::showGraphViewer(GraphViewer &gv) {
     cout << "Graph displayed" << endl;
 }
 
+/**
+ * Function to paint the stations nodes with red color
+ * @param gv
+ */
 void FullGraph::paintNodes(GraphViewer &gv) {
     for (size_t i = 0; i < stations.size(); i++) {
         gv.setVertexColor(stations[i]->getID(), RED);

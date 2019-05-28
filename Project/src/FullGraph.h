@@ -40,7 +40,9 @@ public:
 
     //void floydWarshallShortestPath();
 
-    vector<Vertex<Node>  > pathSingleTruckSingleContainer(Truck * t, Container * c);
+    vector<Vertex<Node>  > pathSingleTruckSingleContainer(Node * t, Node * c);
+
+    void testCases();//tests all the cases (1/3)
     /*
      * Functions to still implement
      */

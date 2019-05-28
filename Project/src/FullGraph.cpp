@@ -203,45 +203,46 @@ vector<Vertex<Node> > FullGraph::pathOneTruckMultipleContainers(Node * t, Node *
 }
 void FullGraph::testCases(){
     cout<<endl<<"==========FIRST TEST==============="<<endl;
+
     //test base case
 
-    Node truck = graph.getVertexSet()[400]->getInfo();
-    Node station = graph.getVertexSet()[327]->getInfo();
+    Node truck = graph.getVertexSet()[400]->getInfo();//getting two vertex that definatly will have a path
+    Node station = graph.getVertexSet()[327]->getInfo();//
 
-    Node * c = nullptr;
-    for(auto x: getContainers()) {
+    Node * c = nullptr;//node for container
+    for(auto x: getContainers()) {//finding a container that has a possible path
         c = new Node(x->getID(), x->getX_Coord(), x->getY_Coord());
        if(graph.isPathPossible(truck, *c)) {
            break;
        }
     }
 
-    if (c == nullptr)
+    if (c == nullptr)//fail check
     {
         cout<<"There were no compatible paths";
         exit(1);
     }
 
-    vector<Vertex<Node>> path = pathSingleTruckSingleContainer(&truck,c),path2= pathSingleTruckSingleContainer(c,&station);
+    vector<Vertex<Node>> path = pathSingleTruckSingleContainer(&truck,c),path2= pathSingleTruckSingleContainer(c,&station);//get paths
 
-    cout <<"First path: ";
+    cout <<"First path: ";//truck to container
     for(auto x: path) {
         cout << x.getInfo().getID() << endl;
     }
-    cout <<"Second path: ";
+    cout <<"Second path: ";//container to station
     for(auto x: path2) {
         cout << x.getInfo().getID() << endl;
     }
 
-    path.insert(path.end(),path2.begin(),path2.end());
+    path.insert(path.end(),path2.begin(),path2.end());//concatenating both paths, resulting in final path
 
-    if(path.empty())
+    if(path.empty())//fail safe
         cout<<"ITS EMPTY"<<endl;
 
-    for(auto x: path)
+    /*for(auto x: path)//reads path
     {
         cout<<"  "<<x.getInfo().getID();
-    }
+    }*/
 
     /*
      * ===================================================================
@@ -249,18 +250,19 @@ void FullGraph::testCases(){
     cout<<endl<<"==========SECOND TEST==============="<<endl;
     //test second case
 
-    path = pathOneTruckMultipleContainers(&truck,&station);
+    path = pathOneTruckMultipleContainers(&truck,&station);//go and looks for the path between truck and station
 
-    if(path.empty())
+    if(path.empty())//fail test
         cout<<"ITS EMPTY 2 "<<endl;
 
-    for(auto x: path) {
+    /*for(auto x: path) {//reads path
         cout<<"  "<<x.getInfo().getID();
-    }
+    }*/
     /*
      * ===================================================================
      */
-    //test thrid case
+    //test third case
+        //NOT COMPLETE
 }
 
 void FullGraph::actualizeNodes ()

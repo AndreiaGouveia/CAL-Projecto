@@ -11,23 +11,23 @@
 #include "Utils.h"
 
 class Container : public Node {
-    enum types_of_waste waste;
+    enum types_of_waste waste;      //type of waste of the container
     float max_capacity;             //max capacity that a container can have
     float capacity;                 //current capacity of the container
     float capacity_rate;            //percentage currently occupied
-    bool toRecover;
-    int a = 101, b = 0;
+    bool toRecover;                 //bool that allows to know if a container should be picked up or not
+    int a = 101, b = 0;             //waste
 public:
-    Container(int id, float x, float y);
+    Container(int id, float x, float y);    //Default constructor
     Container(int id, float x, float y,float max, enum types_of_waste waste);   //limited capacity truck
-    enum types_of_waste getWaste();
-    void setWaste(enum types_of_waste waste);
-    float getCapacity();
-    float getCapacityRate();
-    bool getToRecover();
-    void setToRecover(bool recover);
-    void updateCapacity();
-    void emptyContainer();
+    enum types_of_waste getWaste(); //gets the type of waste
+    void setWaste(enum types_of_waste waste);   //sets the type of waste
+    float getCapacity();    //gets container capacity
+    float getCapacityRate();    //gets the capacity Rate
+    bool getToRecover();    //gets the bool that tells if a container should be picked up or not
+    void setToRecover(bool recover);    //sets the bool that tells if a container should be picked up or not
+    void updateCapacity();  //updates container capacity
+    void emptyContainer();  //empties container
 };
 
 

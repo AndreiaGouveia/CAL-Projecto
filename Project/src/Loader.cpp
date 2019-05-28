@@ -118,8 +118,8 @@ void LoadEdges(Graph<Node> &graph) {
 }
 
 vector<vector<int>> LoadTags() {
-    vector<vector<int>> idAndAttributes;
-    vector<int> ids;
+    vector<vector<int>> idAndAttributes;//keeps the 3 types of objects
+    vector<int> ids;//temp vector
     string line;
     int id;
     int counter = 0;
@@ -140,15 +140,12 @@ vector<vector<int>> LoadTags() {
         getline(file, line);//get type
         line.clear();
         getline(file, line);//get number of objects
-        // cout << line << endl;
         numberOfObjects = stoi(line);//get nr of objects of such categories
-        // cout << "in id, expectd : " << numberOfObjects << endl;
 
         line.clear();
         while (counter < numberOfObjects) {
 
             getline(file, line);
-            //cout << "line " << counter << ": " << line << endl;
             id = stoi(line); //get id of the node
             ids.push_back(id);
 

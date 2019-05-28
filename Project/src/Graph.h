@@ -261,23 +261,8 @@ void Graph<T>::floydWarshallShortestPath() {
                     P[i][j] = P[k][j];
                 }
             }
-            //cout<<endl;
         }
-        //cout<<endl;
     }
-
-
-   /* for(int i=400; i<n; i++)
-    {
-        for(int j=300 ; j<n ;j++)
-        {
-            if(W[i][j]!=INF)
-            {
-                cout<<"v1: "<<i<<"v2: "<<j<<endl;
-                return;
-            }
-        }
-    }*/
 }
 template <class T>
 bool Graph<T>::isPathPossible(const T &orig, const T &dest) const

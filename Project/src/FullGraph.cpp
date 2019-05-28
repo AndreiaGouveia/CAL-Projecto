@@ -4,7 +4,6 @@
  */
 
 void addTags(vector<Container* > &containers, vector<Station*> &stations, vector<vector<int>> &tags, vector<Vertex<Node>*> &nodes) {
-
     /*
      * GET NORMAL CONTAINERS
      */
@@ -29,7 +28,6 @@ void addTags(vector<Container* > &containers, vector<Station*> &stations, vector
             }
         }
     }
-
     /*
      * GET STATIONS
      */
@@ -78,4 +76,13 @@ bool FullGraph::addContainer(Container * container) //add container
 
 vector<int> FullGraph::getContainerIds() { //get containers IDs
     return containerIds;
+}
+
+void FullGraph::showGraphViewer() {
+    /*GraphViewer *gv = new GraphViewer(2000, 2000, false);
+    gv->createWindow(1000, 1000);
+
+    for (size_t i = 0; i < graph.getVertexSet().size(); i++) {
+
+    }*/
 }

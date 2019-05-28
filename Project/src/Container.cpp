@@ -42,6 +42,10 @@ void Container::setToRecover(bool recover) {
     this->toRecover = recover;
 }
 
+/**
+ * Function that updates the content of a container
+ * like if a day has passed and people have filled the container
+ */
 void Container::updateCapacity() {
     float r = rand() % a + b;
     a = 101-r;
@@ -55,6 +59,10 @@ void Container::updateCapacity() {
     }
 }
 
+/**
+ * Function that simulates the collect of a container
+ * like when the waste is collected by the workers day by day
+ */
 void Container::emptyContainer() {
     a = 101;
     b = 0;

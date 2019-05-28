@@ -13,7 +13,6 @@ int main() {
     graph.testCases();
 
     GraphViewer *gv = new GraphViewer(900, 900, false);
-    gv->createWindow(900, 900);
 
     graph.showGraphViewer(*gv);
     graph.paintNodes(*gv);

@@ -10,7 +10,7 @@ void LoadNodes(Graph<Node> &graph) {
     int numNodes;
     ifstream file("..\\Nodes_Porto\\T02_nodes_X_Y_Porto.txt");
 
-    if(!file.is_open()) {
+    if (!file.is_open()) {
         cout << "Error opening file" << endl;
         exit(1);
     }
@@ -21,7 +21,7 @@ void LoadNodes(Graph<Node> &graph) {
     cout << "Loading nodes..." << endl;
 
 
-    while(getline(file, line)) {
+    while (getline(file, line)) {
         string aux;
         int id;
         float x;
@@ -33,13 +33,13 @@ void LoadNodes(Graph<Node> &graph) {
         istringstream sLine(line);
 
         getline(sLine, aux, ',');
-        id=stoi(aux);
+        id = stoi(aux);
         sLine >> space;
         sLine >> x;
         sLine >> space;
         sLine >> y;
 
-        Node point = Node(id,x,y);
+        Node point = Node(id, x, y);
 
         graph.addVertex(point);
         graph.getVertexSet()[graph.getNumVertex() - 1]->setID(id); //Setting a id to be easier to create the edges
@@ -47,8 +47,7 @@ void LoadNodes(Graph<Node> &graph) {
 
     if (numNodes == graph.getNumVertex()) {
         cout << "Nodes successfully loaded!" << endl;
-    }
-    else {
+    } else {
         cout << "nodes : " << graph.getNumVertex() << "     expected: " << numNodes << endl;
         cout << "An unexpected error happened, please reinitialize the program." << endl;
         file.close();
@@ -63,7 +62,7 @@ void LoadEdges(Graph<Node> &graph) {
     int numEdges;
     ifstream file("..\\Nodes_Porto\\T02_edges_Porto.txt");
 
-    if(!file.is_open()) {
+    if (!file.is_open()) {
         cout << "Error opening file" << endl;
         exit(1);
     }
@@ -73,7 +72,7 @@ void LoadEdges(Graph<Node> &graph) {
 
     cout << "Loading edges..." << endl;
 
-    while(getline(file, line)) {
+    while (getline(file, line)) {
         string aux;
         int id_start;
         int id_end;
@@ -101,18 +100,17 @@ void LoadEdges(Graph<Node> &graph) {
         graph.addEdge(start, end, weight);
     }
 
-    int counter=0;
-    for(auto a : graph.getVertexSet())
-    {
+    int counter = 0;
+    for (auto a : graph.getVertexSet()) {
         counter += a->getEdges().size();
     }
 
 
     if (numEdges == counter) {
         cout << "Edges successfully loaded!" << endl;
-    }
-    else {
-        cout << "An unexpected error happened, please reinitialize the program.COUNTER "  <<counter<<" numedges: " <<numEdges<<endl;
+    } else {
+        cout << "An unexpected error happened, please reinitialize the program.COUNTER " << counter << " numedges: "
+             << numEdges << endl;
         file.close();
         exit(1);
     }
@@ -129,7 +127,7 @@ vector<vector<int>> LoadTags() {
     int numberOfObjects;
     ifstream file("..\\Nodes_Porto\\T02_tags_Porto.txt");
 
-    if(!file.is_open()) {
+    if (!file.is_open()) {
         cout << "Error opening file" << endl;
         exit(1);
     }
@@ -138,7 +136,7 @@ vector<vector<int>> LoadTags() {
 
     cout << "Loading nodes..." << endl;
 
-    for(int nrTags = 0; nrTags < 3; nrTags++) {
+    for (int nrTags = 0; nrTags < 3; nrTags++) {
 
         getline(file, line);//get type
         line.clear();

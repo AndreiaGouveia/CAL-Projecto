@@ -9,6 +9,7 @@
 #include "Loader.h"
 #include "Utils.h"
 #include "Loader.h"
+#include "graphviewer.h"
 
 class FullGraph {
 public:
@@ -32,7 +33,7 @@ public:
     bool addStation(Station * station); //add station
     bool addContainer(Container * container); //add container
     vector<int> getContainerIds(); //get containers IDs
-
+    void showGraphViewer();
 
     /*
      * Functions to still implement

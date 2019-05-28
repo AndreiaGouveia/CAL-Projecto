@@ -175,8 +175,7 @@ vector<Vertex<Node> > FullGraph::pathOneTruckMultipleContainers(Node * t, Node *
         if(i==containers.size())
             break;
     }
-if(!path2.empty())
-    path.insert(path.end(),path2.begin(),path2.end());//path from truck to containers
+
 
 
    /* for(int i=0 ; i<stations.size(); i++)
@@ -192,6 +191,8 @@ if(!path2.empty())
         cout<<"Couldn't find a path back to station";
         return path3;//return empty
     }
+
+
 
     path.insert(path.end(),path2.begin(),path2.end());*/
    path3=path;

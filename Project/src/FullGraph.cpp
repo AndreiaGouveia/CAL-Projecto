@@ -168,14 +168,21 @@ void FullGraph::testCases(){
 
     vector<Vertex<Node>> path = pathSingleTruckSingleContainer(&truck,c),path2= pathSingleTruckSingleContainer(c,&station);
 
-    path.insert(path.end(),path2.begin()+1,path2.end());
+    cout<<"Fist path: "<<endl;
+    for(auto x: path)
+    {
+        cout<<"  "<<x.getInfo().getID();
+    }
+    cout<<"Second path: "<<endl;
+    for(auto x: path2)
+    {
+        cout<<"  "<<x.getInfo().getID();
+    }
+
+    path.insert(path.end(),path2.begin(),path2.end());
+
     if(path.empty())
         cout<<"ITS EMPTYY"<<endl;
-
-
-
-
-
 
     for(auto x: path)
     {

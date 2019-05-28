@@ -33,7 +33,6 @@ public:
     bool addStation(Station * station); //add station
     bool addContainer(Container * container); //add container
     vector<int> getContainerIds(); //get containers IDs
-    void showGraphViewer();
     vector<Container *> getContainers();
     vector<Station *> getStations();
     vector<Truck *> getTrucks();
@@ -44,6 +43,10 @@ public:
     vector<Vertex<Node>  > pathOneTruckMultipleContainers(Node * t, Node * s);
 
     void testCases();//tests all the cases (1/3)
+
+    GraphViewer createGraphView();
+    void showGraphViewer(GraphViewer &gv);
+    void paintNodes(GraphViewer &gv);
     /*
      * Functions to still implement
      */

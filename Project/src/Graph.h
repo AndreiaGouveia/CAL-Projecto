@@ -29,7 +29,7 @@ class Vertex {
     T info;                // contents
     vector<Edge<T> > adj;  // list of outgoing edges
     vector<Vertex<T>*> in; // list of vertexes that go into this vertex
-    bool hidden;           // used to preProccess
+    bool hidden;           // used to preProcess
     bool visited;          // auxiliary field used by dfs and bfs
     bool processing;       // auxiliary field used by isDAG
     int indegree;          // auxiliary field used by topsort
@@ -247,7 +247,7 @@ void Graph<T>::floydWarshallShortestPath() {
             P[i][j] = i;
         }
     }
-    cout<<"On third cycle...";
+    cout << "Running Floyd Warshall...";
     for(unsigned k = 0; k < n; k++) {
         for (unsigned i = 0; i < n; i++) {
             //cout <<"....."<<i<<"......";
@@ -295,7 +295,7 @@ vector<T> Graph<T>::getfloydWarshallPath(const T &orig, const T &dest) const{
     int i = findVertexIdx(orig);
     cout<<"1 vertice: "<<i<<endl;
     int j = findVertexIdx(dest);
-    cout<<"2 vertice: "<<j<<endl;
+    cout<<"2 vertice: "<< j <<endl;
     if (i == -1 || j == -1 || W[i][j] == INF) // missing or disconnected
     {
         cout<<"Found error"<<endl;
@@ -304,7 +304,6 @@ vector<T> Graph<T>::getfloydWarshallPath(const T &orig, const T &dest) const{
     for ( ; j != -1; j = P[i][j])
     {
         res.push_back(vertexSet[j]->info);
-        cout<<"here";
     }
     reverse(res.begin(), res.end());
     return res;

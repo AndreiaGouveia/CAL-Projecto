@@ -79,28 +79,32 @@ vector<int> FullGraph::getContainerIds() { //get containers IDs
     return containerIds;
 }
 
-
-
-void FullGraph::showGraphViewer() {
-    GraphViewer *gv = new GraphViewer(900, 900, false);
-    gv->createWindow(900, 900);
-    cout << "Window created" << endl;
+void FullGraph::showGraphViewer(GraphViewer &gv) {
+    cout << endl << "Window created" << endl;
     int id = 1;
 
     for (size_t i = 0; i < graph.getVertexSet().size(); i++) {
-        gv->addNode(graph.getVertexSet()[i]->getID(), (graph.getVertexSet()[i]->getInfo().getX_Coord()-526000)/10, (graph.getVertexSet()[i]->getInfo().getY_Coord()-4554200)/10);
+        gv.addNode(graph.getVertexSet()[i]->getID(), (graph.getVertexSet()[i]->getInfo().getX_Coord()-526000)/10, (graph.getVertexSet()[i]->getInfo().getY_Coord()-4554200)/10);
     }
     for (size_t i = 0; i < graph.getVertexSet().size(); i++) {
         for (size_t j = 0; j < graph.getVertexSet()[i]->getAdj().size(); j++) {
-            gv->addEdge(id, graph.getVertexSet()[i]->getID(), graph.getVertexSet()[i]->getAdj()[j].getDest()->getID(), 1);
+            gv.addEdge(id, graph.getVertexSet()[i]->getID(), graph.getVertexSet()[i]->getAdj()[j].getDest()->getID(), 1);
             id++;
         }
     }
 
-    gv->rearrange();
+    gv.rearrange();
 
-    cout << "Display is done" << endl;
+    cout << "Graph displayed" << endl;
 }
+
+void FullGraph::paintNodes(GraphViewer &gv) {
+    for (size_t i = 0; i < stations.size(); i++) {
+        gv.setVertexColor(stations[i]->getID(), RED);
+    }
+    cout << "Nodes painted" << endl;
+}
+
 vector<Container *> FullGraph::getContainers() {
     return containers;
 }
@@ -113,14 +117,12 @@ vector<Truck *> FullGraph::getTrucks(){
     return trucks;
 }
 
-vector<Vertex<Node>> FullGraph::pathSingleTruckSingleContainer(Node * t, Node * c)
-{
-
+vector<Vertex<Node>> FullGraph::pathSingleTruckSingleContainer(Node * t, Node * c) {
     vector<Node> path;
     vector<Vertex<Node>> result;
     //get path between truck and container
     path = graph.getfloydWarshallPath(*t,*c);
-    cout<<"gets through it"<<endl;
+    cout << "Gets through it" << endl << endl;
     if(path.empty()) {
         cout<<"!!first path empty!!!"<<endl;
         return result;
@@ -128,8 +130,7 @@ vector<Vertex<Node>> FullGraph::pathSingleTruckSingleContainer(Node * t, Node * 
 
     //vector of nodes to vector of vertex
 
-    for(auto x: path)
-    {
+    for(auto x: path) {
         Vertex<Node> * temp = graph.findVertex(x);
         if(temp == nullptr) {
             cout<<"erros"<<endl;
@@ -162,7 +163,7 @@ vector<Vertex<Node> > FullGraph::pathOneTruckMultipleContainers(Node * t, Node *
             path2 = pathSingleTruckSingleContainer(&current, container);
 
             if (path2.empty()) {//couldnt reach it
-                cout << "This path was empty" << endl;
+                cout << "This path was empty" << endl << endl;
                 continue;
             } else {
                 containers[i]->emptyContainer();//sets to recover to false
@@ -175,8 +176,9 @@ vector<Vertex<Node> > FullGraph::pathOneTruckMultipleContainers(Node * t, Node *
         if(i==containers.size())
             break;
     }
-if(!path2.empty())
-    path.insert(path.end(),path2.begin(),path2.end());//path from truck to containers
+
+    if(!path2.empty())
+        path.insert(path.end(),path2.begin(),path2.end());//path from truck to containers
 
 
    /* for(int i=0 ; i<stations.size(); i++)
@@ -194,9 +196,9 @@ if(!path2.empty())
     }
 
     path.insert(path.end(),path2.begin(),path2.end());*/
-   path3=path;
-   reverse(path.begin(),path.end());
-   path3.insert(path3.end(),path.begin(),path.end());
+    path3=path;
+    reverse(path.begin(),path.end());
+    path3.insert(path3.end(),path.begin(),path.end());
     return path3;
 }
 void FullGraph::testCases(){
@@ -207,14 +209,11 @@ void FullGraph::testCases(){
     Node station = graph.getVertexSet()[327]->getInfo();
 
     Node * c = nullptr;
-    for(auto x: getContainers())
-    {
-        c = new Node(x->getID(),x->getX_Coord(),x->getY_Coord());
-       if(graph.isPathPossible(truck,*c))
-       {
+    for(auto x: getContainers()) {
+        c = new Node(x->getID(), x->getX_Coord(), x->getY_Coord());
+       if(graph.isPathPossible(truck, *c)) {
            break;
        }
-
     }
 
     if (c == nullptr)
@@ -225,21 +224,19 @@ void FullGraph::testCases(){
 
     vector<Vertex<Node>> path = pathSingleTruckSingleContainer(&truck,c),path2= pathSingleTruckSingleContainer(c,&station);
 
-    cout<<"Fist path: "<<endl;
-    for(auto x: path)
-    {
-        cout<<"  "<<x.getInfo().getID();
+    cout <<"First path: ";
+    for(auto x: path) {
+        cout << x.getInfo().getID() << endl;
     }
-    cout<<"Second path: "<<endl;
-    for(auto x: path2)
-    {
-        cout<<"  "<<x.getInfo().getID();
+    cout <<"Second path: ";
+    for(auto x: path2) {
+        cout << x.getInfo().getID() << endl;
     }
 
     path.insert(path.end(),path2.begin(),path2.end());
 
     if(path.empty())
-        cout<<"ITS EMPTYY"<<endl;
+        cout<<"ITS EMPTY"<<endl;
 
     for(auto x: path)
     {
@@ -255,10 +252,9 @@ void FullGraph::testCases(){
     path = pathOneTruckMultipleContainers(&truck,&station);
 
     if(path.empty())
-        cout<<"ITS EMPTYY 2 "<<endl;
+        cout<<"ITS EMPTY 2 "<<endl;
 
-    for(auto x: path)
-    {
+    for(auto x: path) {
         cout<<"  "<<x.getInfo().getID();
     }
     /*

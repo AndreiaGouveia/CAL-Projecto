@@ -117,16 +117,18 @@ vector<Vertex<Node>> FullGraph::pathSingleTruckSingleContainer(Node * t, Node * 
 {
 
     vector<Node> path;
+    vector<Vertex<Node>> result;
     //get path between truck and container
     path = graph.getfloydWarshallPath(*t,*c);
     cout<<"gets through it"<<endl;
     if(path.empty())
     {
         cout<<"!!first path empty!!!"<<endl;
+        return result;
     }
 
     //vector of nodes to vector of vertex
-    vector<Vertex<Node>> result;
+
     for(auto x: path)
     {
         Vertex<Node> * temp = graph.findVertex(x);
@@ -141,9 +143,68 @@ vector<Vertex<Node>> FullGraph::pathSingleTruckSingleContainer(Node * t, Node * 
     return result;
 
 }
+vector<Vertex<Node> > FullGraph::pathOneTruckMultipleContainers(Node * t, Node * s){
+    //make the containers all full
+    for(auto x: containers)
+    {
+        x->setToRecover(true);
+    }
+    //we are going to use the base case functions
+    //we will use only one station
+    Node current = *t;
+    vector<Vertex<Node>> path,path2,path3;
 
+    int testC=0;
+
+    while(testC!=5) {//max 5 containers per truck
+        int i = 0;
+        for (; i < containers.size(); i++) {
+            if(!(containers[i]->getToRecover()))//if already visited
+                continue;
+
+            Node *container = new Node(containers[i]->getID(), containers[i]->getX_Coord(),containers[i]->getY_Coord());
+            path2 = pathSingleTruckSingleContainer(&current, container);
+
+            if (path2.empty()) {//couldnt reach it
+                cout << "This path was empty" << endl;
+                continue;
+            } else {
+                containers[i]->emptyContainer();//sets to recover to false
+                testC++;
+                path.insert(path.end(), path2.begin(), path2.end());
+                current = *container;
+                cout << "Added path" << endl;
+            }
+        }
+        if(i==containers.size())
+            break;
+    }
+if(!path2.empty())
+    path.insert(path.end(),path2.begin(),path2.end());//path from truck to containers
+
+
+   /* for(int i=0 ; i<stations.size(); i++)
+    {
+        Node *s =new Node(stations[i]->getID(),stations[i]->getX_Coord(),stations[i]->getY_Coord());
+        path2 = pathSingleTruckSingleContainer(&current,s);//path from last postion to station
+        if(!path2.empty())
+            break;//means we found a path
+    }
+
+    if(path2.empty())
+    {
+        cout<<"Couldn't find a path back to station";
+        return path3;//return empty
+    }
+
+    path.insert(path.end(),path2.begin(),path2.end());*/
+   path3=path;
+   reverse(path.begin(),path.end());
+   path3.insert(path3.end(),path.begin(),path.end());
+    return path3;
+}
 void FullGraph::testCases(){
-
+    cout<<endl<<"==========FIRST TEST==============="<<endl;
     //test base case
 
     Node truck = graph.getVertexSet()[400]->getInfo();
@@ -189,7 +250,45 @@ void FullGraph::testCases(){
         cout<<"  "<<x.getInfo().getID();
     }
 
+    /*
+     * ===================================================================
+     */
+    cout<<endl<<"==========SECOND TEST==============="<<endl;
     //test second case
 
+    path = pathOneTruckMultipleContainers(&truck,&station);
+
+    if(path.empty())
+        cout<<"ITS EMPTYY 2 "<<endl;
+
+    for(auto x: path)
+    {
+        cout<<"  "<<x.getInfo().getID();
+    }
+    /*
+     * ===================================================================
+     */
     //test thrid case
+}
+
+void FullGraph::actualizeNodes ()
+{
+    for(int i=0 ; i<containers.size(); i++)
+    {
+        if(graph.findVertex(*containers[i]) == nullptr)
+            containers.erase(containers.begin()+i);
+    }
+
+    for(int i=0 ; i<stations.size(); i++)
+    {
+        if(graph.findVertex(*stations[i]) == nullptr)
+            stations.erase(stations.begin()+i);
+    }
+
+    for(int i=0 ; i<trucks.size(); i++)
+    {
+        if(graph.findVertex(*trucks[i]) == nullptr)
+            trucks.erase(trucks.begin()+i);
+    }
+
 }

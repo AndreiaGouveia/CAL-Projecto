@@ -37,10 +37,11 @@ public:
     vector<Container *> getContainers();
     vector<Station *> getStations();
     vector<Truck *> getTrucks();
+    void actualizeNodes ();//updates the unprocessed vectors
 
-    //void floydWarshallShortestPath();
-
+    //cases
     vector<Vertex<Node>  > pathSingleTruckSingleContainer(Node * t, Node * c);
+    vector<Vertex<Node>  > pathOneTruckMultipleContainers(Node * t, Node * s);
 
     void testCases();//tests all the cases (1/3)
     /*

@@ -11,6 +11,7 @@ protected:
     int id;
     float x_coord;
     float y_coord;
+    bool visited;
 public:
     Node();
     Node(int id, float x_coord, float y_coord);
@@ -21,6 +22,8 @@ public:
     void setY_Coord(float y_coord);
     float distance (Node &n);
     bool operator ==(Node n);
+    bool getVisited();
+    void setVisited(bool visited);
 };
 
 

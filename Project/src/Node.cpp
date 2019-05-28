@@ -6,12 +6,14 @@ Node::Node() {
     id = 0;
     x_coord = 0;
     y_coord = 0;
+    visited = false;
 }
 
 Node::Node(int id, float x_coord, float y_coord) {
     this->id = id;
     this->x_coord = x_coord;
     this->y_coord = y_coord;
+    visited=false;
 }
 
 int Node::getID() {
@@ -41,4 +43,10 @@ float Node::distance(Node &n) {
 bool Node::operator ==(Node n)
 {
     return this->getID() == n.getID();
+}
+bool Node::getVisited(){
+    return visited;
+}
+void Node::setVisited(bool visited){
+    this->visited=visited;
 }

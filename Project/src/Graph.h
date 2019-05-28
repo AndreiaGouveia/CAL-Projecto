@@ -146,9 +146,16 @@ class Graph {
     vector<Vertex<T> *> vertexSet;    // vertex set
 
     void dfsVisit(Vertex<T> *v,  vector<T> & res) const;
-    Vertex<T> *findVertex(const T &in) const;
+
     bool dfsIsDAG(Vertex<T> *v) const;
+    /*
+     * FloyWarshall
+     */
+    double ** W = nullptr; // dist
+    int **P = nullptr; // path
+    int findVertexIdx(const T &in) const;
 public:
+    Vertex<T> *findVertex(const T &in) const;
     int getNumVertex() const;
     vector<Vertex<T>*> getVertexSet() const;
     bool addVertex(const T &in);
@@ -163,12 +170,95 @@ public:
     vector<T> getPath(const T &origin, const T &dest) const;
     double edgeCost(int i, int j);
     int vertexPrev(int i, int j);
+    Graph<T> * preProcessGraph();//aggregates Vertexes that can be aggregated to otimize the other graph functions
+    /*
+     * FloydWarshall
+     */
+    ~Graph();
+    void floydWarshallShortestPath();
+    vector<T> getfloydWarshallPath(const T &orig, const T &dest) const;
 };
 
 
 template <class T>
 int Graph<T>::getNumVertex() const {
     return vertexSet.size();
+}
+
+
+/*
+* Finds the index of the vertex with a given content.
+*/
+template <class T>
+int Graph<T>::findVertexIdx(const T &in) const {
+    for (unsigned i = 0; i < vertexSet.size(); i++)
+        if (vertexSet[i]->info == in)
+            return i;
+    return -1;
+}
+template <class T>
+void deleteMatrix(T **m, int n) {
+    if (m != nullptr) {
+        for (int i = 0; i < n; i++)
+            if (m[i] != nullptr)
+                delete [] m[i];
+        delete [] m;
+    }
+}
+template <class T>
+Graph<T>::~Graph() {
+    deleteMatrix(W, vertexSet.size());
+    deleteMatrix(P, vertexSet.size());
+}
+template<class T>
+void Graph<T>::floydWarshallShortestPath() {
+    unsigned n = vertexSet.size();
+    deleteMatrix(W, n);
+    deleteMatrix(P, n);
+    W = new double *[n];
+    P = new int *[n];
+    for (unsigned i = 0; i < n; i++) {
+        W[i] = new double[n];
+        P[i] = new int[n];
+        for (unsigned j = 0; j < n; j++) {
+            W[i][j] = i == j? 0 : INF;
+            P[i][j] = -1;
+        }
+        for (auto e : vertexSet[i]->adj) {
+            int j = findVertexIdx(e.dest->info);
+            W[i][j] = e.weight;
+            P[i][j] = i;
+        }
+    }
+    for(unsigned k = 0; k < n; k++)
+        for(unsigned i = 0; i < n; i++)
+            for(unsigned j = 0; j < n; j++) {
+                if(W[i][k] == INF || W[k][j] == INF)
+                    continue; // avoid overflow
+                int val = W[i][k] + W[k][j];
+                if (val < W[i][j]) {
+                    W[i][j] = val;
+                    P[i][j] = P[k][j];
+                }
+            }
+}
+template<class T>
+vector<T> Graph<T>::getfloydWarshallPath(const T &orig, const T &dest) const{
+    vector<T> res;
+    int i = findVertexIdx(orig);
+    int j = findVertexIdx(dest);
+    if (i == -1 || j == -1 || W[i][j] == INF) // missing or disconnected
+        return res;
+    for ( ; j != -1; j = P[i][j])
+        res.push_back(vertexSet[j]->info);
+    reverse(res.begin(), res.end());
+    return res;
+}
+
+template <class T>
+Graph<T> * Graph<T>::preProcessGraph()//aggregates Vertexes that can be aggregated to otimize the other graph functions
+{
+
 }
 
 template <class T>

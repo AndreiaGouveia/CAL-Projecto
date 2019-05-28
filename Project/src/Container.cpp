@@ -61,4 +61,4 @@ void Container::emptyContainer() {
     capacity = 0;
     capacity_rate = 0.0;
     setToRecover(false);
-};
+}

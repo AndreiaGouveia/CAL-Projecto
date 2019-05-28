@@ -55,3 +55,7 @@ void Truck::updateCapacity(float waste_volume) {
         // Vai direto para a central
     }
 }
+
+Node Truck::getInitialLocation(){
+    return initialLocation;
+}

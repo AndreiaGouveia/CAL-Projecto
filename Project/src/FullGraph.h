@@ -23,6 +23,7 @@ public:
     vector<Truck *> trucks;
     vector<Container*> containers;
     vector<Station *> stations;
+    vector<int> containerIds;
 
     /*
      * Functions
@@ -37,17 +38,19 @@ public:
 
     bool addContainer(Container * container); //add container
 
-    vector<string> getContainerIds(); //get containers IDs
+    vector<int> getContainerIds();
 
+    void floydWarshallShortestPath();
+
+    vector<Vertex<Node>  > pathSingleTruckSingleContainer(Truck * t, Container * c);
     /*
      * Functions to still implement
      */
     //FullGraph & displayRoads();
     // FullGraph & randomizeEdges(int nIntersections);
-    //vector<Vertex<Node> * > generateSingleTruckSingleContainer(Truck * t, Container * c);
+
     //vector<Vertex<Node> * > generateOneTruckMultipleContainers(Truck * t, Station * s);
     //vector<vector<Vertex<Node> * >> generateMultipleTrucskMultipleContainers(Station * s, double trucksVolume);
-    //void floydWarshallShortestPath();
     //vector<Vertex<Node> *> backPreProcess(vector<Vertex<Node>* > shortenedPath);
     //void recalculateDistContainers(int currentVertexPos, bool isSort);
 

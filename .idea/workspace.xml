@@ -12,29 +12,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="110aa637-b42f-40d4-a252-3c5fe21194b1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Project/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/Project/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/cmake-build-debug/CMakeFiles/Progress/4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/cmake-build-debug/CMakeFiles/Progress/count.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/cmake-build-debug/CMakeFiles/Project.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/Project/cmake-build-debug/CMakeFiles/Project.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/cmake-build-debug/CMakeFiles/Project.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/Project/cmake-build-debug/CMakeFiles/Project.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/cmake-build-debug/CMakeFiles/Project.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/Project/cmake-build-debug/CMakeFiles/Project.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/cmake-build-debug/CMakeFiles/Project.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/Project/cmake-build-debug/CMakeFiles/Project.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/cmake-build-debug/CMakeFiles/Project.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/Project/cmake-build-debug/CMakeFiles/Project.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/cmake-build-debug/CMakeFiles/Project.dir/objects1.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/Project/cmake-build-debug/CMakeFiles/Project.dir/objects1.rsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/cmake-build-debug/CMakeFiles/Project.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/Project/cmake-build-debug/CMakeFiles/Project.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/Project/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Project/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/cmake-build-debug/Project.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/Project/cmake-build-debug/Project.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/src/Container.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/Container.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/src/FullGraph.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/FullGraph.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/src/FullGraph.h" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/FullGraph.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project/src/Graph.h" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/Graph.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/src/Load.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/src/Load.h" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Project/src/Loader.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/Loader.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/src/Loader.h" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/Loader.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/src/Node.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/Node.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/src/Node.h" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/Node.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/src/Station.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/Station.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/src/Station.h" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/Station.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/src/Truck.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/Truck.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/src/Truck.h" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/Truck.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/Project/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -63,11 +49,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Project/src/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="136">
+              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -75,8 +61,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Project/src/Station.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="136">
+              <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -84,8 +70,50 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Project/src/Station.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="323">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project/src/Truck.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="692">
+              <caret line="60" column="1" selection-start-line="60" selection-start-column="1" selection-end-line="60" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Project/src/Truck.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="29" column="16" lean-forward="true" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+              <folding>
+                <element signature="e#49#68#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project/src/Node.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="731">
+              <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Project/src/Node.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="459">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
+              <folding>
+                <element signature="e#47#66#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -93,35 +121,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Project/src/Loader.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="125" column="30" selection-start-line="125" selection-start-column="30" selection-end-line="125" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Project/CMakeLists.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="109" selection-start-line="9" selection-start-column="109" selection-end-line="9" selection-end-column="109" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/T02/Porto/T02_edges_Porto.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182920">
-              <caret line="10760" column="20" selection-start-line="10760" selection-start-column="12" selection-end-line="10760" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/T02/Porto/T02_nodes_X_Y_Porto.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="4748" column="10" selection-start-line="4748" selection-start-column="1" selection-end-line="4748" selection-end-column="10" />
+            <state relative-caret-position="2907">
+              <caret line="171" selection-start-line="171" selection-end-line="171" />
             </state>
           </provider>
         </entry>
@@ -130,7 +131,7 @@
         <entry file="file://$PROJECT_DIR$/Project/src/Loader.h">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
               <folding>
                 <element signature="e#51#70#0" expanded="true" />
               </folding>
@@ -139,32 +140,11 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Project/src/Graph.h">
+        <entry file="file://$PROJECT_DIR$/Project/src/graphviewer.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="121" column="1" selection-start-line="121" selection-start-column="1" selection-end-line="121" selection-end-column="1" />
+            <state>
               <folding>
-                <element signature="e#53#70#0" expanded="true" />
-                <element signature="e#225#234#0" expanded="true" />
-                <element signature="e#256#265#0" expanded="true" />
-                <element signature="e#288#297#0" expanded="true" />
-                <element signature="e#548#557#0" expanded="true" />
-                <element signature="e#1372#1381#0" expanded="true" />
-                <element signature="e#1341#1350#0" expanded="true" />
-                <element signature="e#1531#1540#0" expanded="true" />
-                <element signature="e#1820#1829#0" expanded="true" />
-                <element signature="e#2052#2061#0" expanded="true" />
-                <element signature="e#2165#2174#0" expanded="true" />
-                <element signature="e#2241#2250#0" expanded="true" />
-                <element signature="e#2322#2331#0" expanded="true" />
-                <element signature="e#2407#2416#0" expanded="true" />
-                <element signature="e#2481#2490#0" expanded="true" />
-                <element signature="e#2675#2684#0" expanded="true" />
-                <element signature="e#2840#2849#0" expanded="true" />
-                <element signature="e#3064#3073#0" expanded="true" />
-                <element signature="e#3320#3329#0" expanded="true" />
-                <element signature="e#4125#4134#0" expanded="true" />
-                <element signature="e#4213#4222#0" expanded="true" />
+                <element signature="e#0#24#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -206,17 +186,22 @@
       <list>
         <option value="$PROJECT_DIR$/T02/Porto/T02_tags_Porto.txt" />
         <option value="$PROJECT_DIR$/Project/src/Load.h" />
-        <option value="$PROJECT_DIR$/Project/src/Container.h" />
-        <option value="$PROJECT_DIR$/Project/src/Station.h" />
-        <option value="$PROJECT_DIR$/Project/src/Container.cpp" />
-        <option value="$PROJECT_DIR$/Project/src/Node.cpp" />
-        <option value="$PROJECT_DIR$/Project/src/Node.h" />
-        <option value="$PROJECT_DIR$/Project/src/Graph.h" />
         <option value="$PROJECT_DIR$/Project/src/Loader.h" />
         <option value="$PROJECT_DIR$/Project/src/Load.cpp" />
-        <option value="$PROJECT_DIR$/Project/src/Loader.cpp" />
         <option value="$PROJECT_DIR$/Project/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/Project/src/main.cpp" />
+        <option value="$PROJECT_DIR$/Project/src/Graph.h" />
+        <option value="$PROJECT_DIR$/Project/src/FullGraph.h" />
+        <option value="$PROJECT_DIR$/Project/src/FullGraph.cpp" />
+        <option value="$PROJECT_DIR$/Project/src/Container.h" />
+        <option value="$PROJECT_DIR$/Project/src/Container.cpp" />
+        <option value="$PROJECT_DIR$/Project/src/Loader.cpp" />
+        <option value="$PROJECT_DIR$/Project/src/Node.cpp" />
+        <option value="$PROJECT_DIR$/Project/src/Node.h" />
+        <option value="$PROJECT_DIR$/Project/src/Station.cpp" />
+        <option value="$PROJECT_DIR$/Project/src/Station.h" />
+        <option value="$PROJECT_DIR$/Project/src/Truck.cpp" />
+        <option value="$PROJECT_DIR$/Project/src/Truck.h" />
       </list>
     </option>
   </component>
@@ -231,6 +216,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -264,7 +250,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -312,11 +297,12 @@
       <workItem from="1558877357290" duration="7302000" />
       <workItem from="1558884969597" duration="5860000" />
       <workItem from="1558912151346" duration="6544000" />
+      <workItem from="1559006057491" duration="734000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40986000" />
+    <option name="totallyTimeSpent" value="41720000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -331,7 +317,7 @@
     <frame x="-7" y="-7" width="1550" height="974" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24899329" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.252349" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -380,26 +366,10 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Graph.cpp" />
-    <entry file="file://$PROJECT_DIR$/Project/src/Truck.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project/src/Truck.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/T02/Aveiro/T02_edges_Aveiro.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project/cmake-build-debug/CMakeCache.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/cmake-build-debug/CMakeCache.txt" />
     <entry file="file://$PROJECT_DIR$/T02/Aveiro/T02_tags_Aveiro.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1207">
@@ -444,23 +414,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project/src/Container.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="28" column="42" selection-start-line="28" selection-start-column="3" selection-end-line="28" selection-end-column="42" />
-          <folding>
-            <element signature="e#57#76#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project/src/Container.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/lib/gcc/i686-w64-mingw32/8.1.0/include/c++/iosfwd">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="142">
@@ -475,64 +428,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project/src/Node.h">
+    <entry file="file://$PROJECT_DIR$/Project/src/Load.h" />
+    <entry file="file://$PROJECT_DIR$/Project/src/Load.cpp" />
+    <entry file="file://$PROJECT_DIR$/Project/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="21" column="29" lean-forward="true" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
-          <folding>
-            <element signature="e#47#66#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project/src/Node.cpp">
+    <entry file="file://$PROJECT_DIR$/T02/Porto/T02_edges_Porto.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="40" column="30" lean-forward="true" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project/src/Station.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project/src/Station.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project/src/Graph.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="121" column="1" selection-start-line="121" selection-start-column="1" selection-end-line="121" selection-end-column="1" />
-          <folding>
-            <element signature="e#53#70#0" expanded="true" />
-            <element signature="e#225#234#0" expanded="true" />
-            <element signature="e#256#265#0" expanded="true" />
-            <element signature="e#288#297#0" expanded="true" />
-            <element signature="e#548#557#0" expanded="true" />
-            <element signature="e#1372#1381#0" expanded="true" />
-            <element signature="e#1341#1350#0" expanded="true" />
-            <element signature="e#1531#1540#0" expanded="true" />
-            <element signature="e#1820#1829#0" expanded="true" />
-            <element signature="e#2052#2061#0" expanded="true" />
-            <element signature="e#2165#2174#0" expanded="true" />
-            <element signature="e#2241#2250#0" expanded="true" />
-            <element signature="e#2322#2331#0" expanded="true" />
-            <element signature="e#2407#2416#0" expanded="true" />
-            <element signature="e#2481#2490#0" expanded="true" />
-            <element signature="e#2675#2684#0" expanded="true" />
-            <element signature="e#2840#2849#0" expanded="true" />
-            <element signature="e#3064#3073#0" expanded="true" />
-            <element signature="e#3320#3329#0" expanded="true" />
-            <element signature="e#4125#4134#0" expanded="true" />
-            <element signature="e#4213#4222#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="783">
+          <caret line="10760" column="20" selection-start-line="10760" selection-start-column="12" selection-end-line="10760" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -543,58 +451,125 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/T02/Porto/T02_edges_Porto.txt">
+    <entry file="file://$PROJECT_DIR$/Project/src/FullGraph.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182920">
-          <caret line="10760" column="20" selection-start-line="10760" selection-start-column="12" selection-end-line="10760" selection-end-column="20" />
+        <state relative-caret-position="918">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project/src/Load.h">
+    <entry file="file://$PROJECT_DIR$/Project/src/FullGraph.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" selection-start-line="14" selection-end-line="14" selection-end-column="31" />
+        <state relative-caret-position="-226">
+          <caret line="71" column="1" lean-forward="true" selection-start-line="71" selection-start-column="1" selection-end-line="71" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/src/Container.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
           <folding>
-            <element signature="e#109#128#0" expanded="true" />
+            <element signature="e#57#76#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/src/Container.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="556">
+          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/src/edgetype.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/src/Graph.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="33" lean-forward="true" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/src/graphviewer.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/src/Loader.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2907">
+          <caret line="171" selection-start-line="171" selection-end-line="171" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Project/src/Loader.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="11" column="31" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
           <folding>
             <element signature="e#51#70#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Project/src/Load.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project/src/Loader.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="125" column="30" selection-start-line="125" selection-start-column="30" selection-end-line="125" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Project/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="109" selection-start-line="9" selection-start-column="109" selection-end-line="9" selection-end-column="109" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Project/src/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="136">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/src/Node.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/src/Node.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="e#47#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/src/Station.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/src/Station.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/src/Truck.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="692">
+          <caret line="60" column="1" selection-start-line="60" selection-start-column="1" selection-end-line="60" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project/src/Truck.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="29" column="16" lean-forward="true" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+          <folding>
+            <element signature="e#49#68#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

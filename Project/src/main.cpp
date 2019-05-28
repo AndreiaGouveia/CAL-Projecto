@@ -15,7 +15,7 @@ int main() {
     GraphViewer *gv = new GraphViewer(900, 900, false);
 
     graph.showGraphViewer(*gv);
-    graph.paintNodes(*gv);
+    graph.paintNodes(*gv);*/
     system("pause");
     return 0;
 }

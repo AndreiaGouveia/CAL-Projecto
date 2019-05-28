@@ -193,6 +193,7 @@ public:
     ~Graph();
     void floydWarshallShortestPath();
     vector<T> getfloydWarshallPath(const T &orig, const T &dest) const;
+    bool isPathPossible(const T &orig, const T &dest) const;
 };
 
 
@@ -200,7 +201,6 @@ template <class T>
 int Graph<T>::getNumVertex() const {
     return vertexSet.size();
 }
-
 
 /*
 * Finds the index of the vertex with a given content.
@@ -228,6 +228,7 @@ Graph<T>::~Graph() {
 }
 template<class T>
 void Graph<T>::floydWarshallShortestPath() {
+
     unsigned n = vertexSet.size();
     deleteMatrix(W, n);
     deleteMatrix(P, n);
@@ -246,10 +247,13 @@ void Graph<T>::floydWarshallShortestPath() {
             P[i][j] = i;
         }
     }
-    for(unsigned k = 0; k < n; k++)
-        for(unsigned i = 0; i < n; i++)
-            for(unsigned j = 0; j < n; j++) {
-                if(W[i][k] == INF || W[k][j] == INF)
+    cout<<"On third cycle...";
+    for(unsigned k = 0; k < n; k++) {
+        for (unsigned i = 0; i < n; i++) {
+            //cout <<"....."<<i<<"......";
+            for (unsigned j = 0; j < n; j++) {
+               // cout<<"--"<<j<<"--";
+                if (W[i][k] == INF || W[k][j] == INF)
                     continue; // avoid overflow
                 int val = W[i][k] + W[k][j];
                 if (val < W[i][j]) {
@@ -257,16 +261,51 @@ void Graph<T>::floydWarshallShortestPath() {
                     P[i][j] = P[k][j];
                 }
             }
+            //cout<<endl;
+        }
+        //cout<<endl;
+    }
+
+
+   /* for(int i=400; i<n; i++)
+    {
+        for(int j=300 ; j<n ;j++)
+        {
+            if(W[i][j]!=INF)
+            {
+                cout<<"v1: "<<i<<"v2: "<<j<<endl;
+                return;
+            }
+        }
+    }*/
+}
+template <class T>
+bool Graph<T>::isPathPossible(const T &orig, const T &dest) const
+{
+    int v1 = findVertexIdx(orig);
+    int v2 = findVertexIdx(dest);
+
+    if(v1==-1 || v2 == -1)
+        return false;
+    return W[v1][v2]!=INF;
 }
 template<class T>
 vector<T> Graph<T>::getfloydWarshallPath(const T &orig, const T &dest) const{
     vector<T> res;
     int i = findVertexIdx(orig);
+    cout<<"1 vertice: "<<i<<endl;
     int j = findVertexIdx(dest);
+    cout<<"2 vertice: "<<j<<endl;
     if (i == -1 || j == -1 || W[i][j] == INF) // missing or disconnected
+    {
+        cout<<"Found error"<<endl;
         return res;
+    }
     for ( ; j != -1; j = P[i][j])
+    {
         res.push_back(vertexSet[j]->info);
+        cout<<"here";
+    }
     reverse(res.begin(), res.end());
     return res;
 }

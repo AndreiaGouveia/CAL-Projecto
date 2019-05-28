@@ -113,18 +113,12 @@ vector<Truck *> FullGraph::getTrucks(){
     return trucks;
 }
 
-vector<Vertex<Node>> FullGraph::pathSingleTruckSingleContainer(Truck * t, Container * c) {
-    Station * s = getStations()[0];
-    Node * station = new Node(s->getID(),s->getX_Coord(),s->getY_Coord());
-    cout<<"Station id"<<station->getID()<<endl;
-    Node * truck = new Node(t->getID(),t->getX_Coord(),t->getY_Coord());
-    cout<<"Truck id"<<truck->getID()<<endl;
-    Node * container = new Node(c->getID(),c->getX_Coord(),c->getY_Coord());
-    cout<<"Container id"<<container->getID()<<endl;
+vector<Vertex<Node>> FullGraph::pathSingleTruckSingleContainer(Node * t, Node * c)
+{
 
     vector<Node> path;
     //get path between truck and container
-    path = graph.getfloydWarshallPath(*truck,*container);
+    path = graph.getfloydWarshallPath(*t,*c);
     cout<<"gets through it"<<endl;
     if(path.empty()) {
         cout<<"!!first path empty!!!"<<endl;
@@ -141,4 +135,56 @@ vector<Vertex<Node>> FullGraph::pathSingleTruckSingleContainer(Truck * t, Contai
         result.push_back(*temp);
     }
     return result;
+}
+
+void FullGraph::testCases(){
+
+    //test base case
+
+    Node truck = graph.getVertexSet()[400]->getInfo();
+    Node station = graph.getVertexSet()[327]->getInfo();
+
+    Node * c = nullptr;
+    for(auto x: getContainers())
+    {
+        c = new Node(x->getID(),x->getX_Coord(),x->getY_Coord());
+       if(graph.isPathPossible(truck,*c))
+       {
+           break;
+       }
+
+    }
+
+    if (c == nullptr)
+    {
+        cout<<"There were no compatible paths";
+        exit(1);
+    }
+
+    vector<Vertex<Node>> path = pathSingleTruckSingleContainer(&truck,c),path2= pathSingleTruckSingleContainer(c,&station);
+
+    cout<<"Fist path: "<<endl;
+    for(auto x: path)
+    {
+        cout<<"  "<<x.getInfo().getID();
+    }
+    cout<<"Second path: "<<endl;
+    for(auto x: path2)
+    {
+        cout<<"  "<<x.getInfo().getID();
+    }
+
+    path.insert(path.end(),path2.begin(),path2.end());
+
+    if(path.empty())
+        cout<<"ITS EMPTYY"<<endl;
+
+    for(auto x: path)
+    {
+        cout<<"  "<<x.getInfo().getID();
+    }
+
+    //test second case
+
+    //test thrid case
 }
